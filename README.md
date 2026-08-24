@@ -65,7 +65,7 @@ Readings:
 Lectures:
 - [Foundations Part 1](https://www.youtube.com/watch?v=1jILnhznzK4)
 - [Design Patterns 101](https://www.youtube.com/watch?v=bQTEaKhhC8Y)
-- [Foundations Part 2](https://www.youtube.com/watch?v=Eorc2s8O4QA&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=3)
+- [Foundations Part 2](https://www.youtube.com/watch?v=MQs7pxUtKyk&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=3)
 
 Assignments:
 - **Undergraduate:** [Discussion Question 1](https://github.com/Applied-Ontology-Education/Ontology-and-Intel-Analysis/discussions/1)

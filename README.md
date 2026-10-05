@@ -211,7 +211,10 @@ Assignments:
 ---
 
 ### Week 11 — November 2–8
-**Cybersecurity Domain**
+*Cybersecurity Domain*
+Lectures:
+- [Cybersecurity from an Ontological Lens](https://www.youtube.com/watch?v=hzKa64rfiBk&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=14)
+- [Design Patterns: Practice, Practice, Practice](https://www.youtube.com/watch?v=HezLxRoHa14&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=16)
 
 Readings:
 - *Ontology for ATT&CK*
@@ -226,8 +229,12 @@ Assignments:
 ---
 
 ### Week 12 — November 9–15
-**External and Internal Threats**
+*External and Internal Threats*
 
+Lectures:
+- [Ontology of Domestic Terrorism](https://www.youtube.com/watch?v=LzQMP-r7ha0&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=15)
+- [Design Patterns: Practice, Practice, Practice](https://www.youtube.com/watch?v=O3SZwii1Cd4&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=18)
+  
 Readings:
 - *An Ontological Framework for Understanding the Terror-Crime Nexus*
 - *A Simple Ontology for the Analysis of Terrorist Attacks*
@@ -241,6 +248,8 @@ Assignments:
 
 ### Week 13 — November 16–22
 **Ontology of Secrets I**
+Lectures:
+- [Ontology of Secrets](https://www.youtube.com/watch?v=HmcLwpchd9g&list=PLDpLIEgKNGbMyC42zLl3_c--2CifBz_bu&index=17)
 
 Readings:
 - *Falsehoods Programmers Believe*

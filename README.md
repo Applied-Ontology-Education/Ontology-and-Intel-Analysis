@@ -1,9 +1,5 @@
 # Ontology Engineering and Intelligence Analysis
 
-**Format:** Remote and asynchronous  
-**Term:** Fall 2026  
-**Duration:** 15 weeks
-
 This course integrates foundational principles of ontology engineering with contemporary research in intelligence analysis. It explores ontological dimensions that inform intelligence methodologies, including questions concerning knowledge, truth, evidence, information, decision-making, bias, military intelligence, cybersecurity, threats, deception, and secrecy.
 
 The course is designed around a shared sequence of readings, recorded lectures, ontology design-pattern exercises, and applied modeling activities. The same instructional materials support both undergraduate and graduate students, but the two tracks have different graded assessments.

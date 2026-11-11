@@ -12,6 +12,17 @@ New terms use the prefix `:` (`https://github.com/luay9/meeting-mandate#`). Ever
 | CQ4 | Which meetings are decision meetings? | `cco:Act of Meeting`, `:DecisionMeeting` (defined) | inferred `rdf:type` | `queries/cq4.rq` |
 | CQ5 | What work does a mandate prescribe, and which objective does it serve? | `:Mandate`, `cco:Planned Act`, `cco:Objective` | `cco:prescribes` | `queries/cq5.rq` |
 
+## Extendability questions (added 2026-11-11)
+
+These ask about the documents themselves rather than about the meetings. They need one named graph per document, so they run on `results/extendability/program-a.trig`, not on the reasoned file. See `ontology/BUILD.md` §7.
+
+| # | Question | How it is answered | Query |
+|---|---|---|---|
+| X01 | Which documents is each mandate known from? | the graphs that hold a fact about it | `queries/extendability/x01-provenance.rq` |
+| X02 | What did document D add to things the base already knew? | triples in D whose subject appears in an earlier graph | `queries/extendability/x02-what-changed.rq` |
+| X04 | Which mandates rest on one source, and which on several? | the number of documents that have the mandate as a part | `queries/extendability/x04-corroboration.rq` |
+| V04 | Which words did each document add to the vocabulary? | labels first seen in that graph | `queries/extendability/v04-new-terms.rq` |
+
 ## What each question tests
 
 **CQ1: recurrence.** This is the signal the pattern exists to catch. A version bump (M06 v1.0 → v1.1) is a new mandate, output by a later act of deciding that the earlier one `precedes`. The identifiers carry the human-readable ID. Expected answer on the synthetic data: M01, M05 and M06, and not M02.

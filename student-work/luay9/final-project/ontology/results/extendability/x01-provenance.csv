@@ -1,0 +1,8 @@
+mandateID,documents,sources
+M01 v1.0,1,D01: minutes of meeting 1
+M01 v1.1,1,D05: minutes of meeting 4
+M02 v1.0,1,D01: minutes of meeting 1
+M05 v1.0,1,D02: minutes of meeting 2
+M05 v1.1,1,D05: minutes of meeting 4
+M06 v1.0,1,D02: minutes of meeting 2
+M06 v1.1,2,D05: minutes of meeting 4 | D06: follow-up letter on M06 v1.1

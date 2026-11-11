@@ -1,0 +1,8 @@
+id	file	type	date	expected
+D01	D01-minutes-meeting-1.ttl	minutes	2025-07-10	base
+D02	D02-minutes-meeting-2.ttl	minutes	2025-09-18	depth
+D03	D03-presentation-meeting-3.ttl	presentation	2025-10-15	breadth
+D04	D04-minutes-meeting-3.ttl	minutes	2025-10-16	depth
+D05	D05-minutes-meeting-4.ttl	minutes	2026-02-24	depth
+D06	D06-letter-1.ttl	letter	2026-03-05	language
+D07	D07-conflicting-status-note.ttl	status note	2026-03-20	rejected

@@ -53,4 +53,10 @@ echo "6. Quality report (this ontology only, not CCO)"
 $R report --input meeting-mandate.ttl --profile report-profile.txt \
   --fail-on none --output results/report.tsv
 
+echo "7. Sustained extendability: ingest the documents one at a time"
+# Each document in documents/ is merged onto the documents accepted before it,
+# reasoned with HermiT and queried with CQ1-CQ5. A document that makes the base
+# inconsistent is rejected; an earlier answer that stops holding fails the build.
+python ingest.py
+
 echo "Done. Results are in results/."

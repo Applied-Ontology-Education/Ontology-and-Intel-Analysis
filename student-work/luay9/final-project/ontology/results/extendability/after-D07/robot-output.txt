@@ -1,0 +1,1 @@
+2026-11-11 17:15:36,359 ERROR org.obolibrary.robot.ReasonerHelper - The ontology is inconsistent. TIP: use a tool like Protege to find explanations

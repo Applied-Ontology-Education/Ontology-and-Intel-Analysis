@@ -1,0 +1,16 @@
+# X04. Which mandates are carried by only one document, and which by several?
+# A mandate carried by two documents (minutes and a letter) is corroborated;
+# one carried by a single set of minutes rests on that one source.
+PREFIX :        <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:     <https://www.commoncoreontologies.org/>
+PREFIX obo:     <http://purl.obolibrary.org/obo/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?mandateID (COUNT(DISTINCT ?doc) AS ?carriedBy)
+       (IF(COUNT(DISTINCT ?doc) > 1, "several sources", "one source") AS ?support)
+WHERE {
+  GRAPH ?gm { ?m a :Mandate . ?id cco:ont00001916 ?m ; rdfs:label ?mandateID . }
+  GRAPH ?g  { ?doc obo:BFO_0000178 ?m . }          # has continuant part
+}
+GROUP BY ?mandateID
+ORDER BY DESC(?carriedBy) ?mandateID

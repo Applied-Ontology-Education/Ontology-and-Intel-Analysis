@@ -21,7 +21,10 @@ bash build.sh /path/to/CommonCoreOntologiesMerged.ttl
 | `queries/cq1–cq5.rq` | One SPARQL query per competency question | written |
 | `queries/checks/` | Queries that check the reasoner's output | written |
 | `queries/qc/`, `report-profile.txt` | Quality-report rules | written |
-| `results/` | Every output the tests produce | generated (steps 3–6) |
+| `results/` | Every output the tests produce | generated (steps 3–7) |
+| `documents/` | Program A again, as 7 separate documents (D01–D07) for the extendability test, with `manifest.tsv` | written |
+| `ingest.py` | Ingests the documents one at a time: reason, CQs, regression, counts, named graphs | written |
+| `queries/extendability/` | X01, X02, X04, V04: questions that need one named graph per document | written |
 
 The competency questions themselves are in [`../03-competency-questions.md`](../03-competency-questions.md).
 
@@ -100,6 +103,50 @@ ROBOT's default `missing_definition` rule looks for `IAO:0000115`, the OBO defin
 I checked that both rules fire on a copy with one definition and one Arabic label removed.
 
 **Result: 0 errors, 0 warnings, 1 info.** The info is `missing_superclass` on DecisionMeeting. That's expected: it's a defined class with an equivalence and no asserted parent, and HermiT places it under Act of Meeting.
+
+### 7. Sustained extendability: one document at a time
+
+```bash
+python ingest.py
+```
+
+The one-shot build above loads all of Program A at once. This step loads it the way it would arrive: one document at a time, in meeting order. Each document is a file in [`documents/`](documents/) and becomes one named graph. The idea and the course readings behind it are in [`../../presentation-1/course-reflection/04-sustained-extendability.md`](../../presentation-1/course-reflection/04-sustained-extendability.md).
+
+For each document, `ingest.py`:
+
+1. merges the base (`cco-module.ttl` + `meeting-mandate.ttl`), every document accepted so far, and the new one, and reasons with HermiT. **If the result is inconsistent, the document is rejected and the base stays as it was.**
+2. answers CQ1–CQ5 on that snapshot
+3. checks that **every earlier answer still holds**. A row with an empty cell (CQ5's objective before the deck arrives) counts as still holding when a new row agrees on every filled cell. Unknown becoming known is depth, not breakage.
+4. counts what the document added: new individuals, facts on nodes the base already had, links into the base, classes used for the first time, new OWL classes (must be 0) and new labels.
+
+| Doc | Kind | Classes reused | Classes first used | New labels | CQs answered | Regressions |
+|---|---|---|---|---|---|---|
+| D01 minutes, meeting 1 | base | 0/11 | 11 | 0 | 4/5 | — |
+| D02 minutes, meeting 2 | depth | 8/8 | — | 1 | 4/5 | 0 |
+| D03 deck, meeting 3 | breadth | 1/3 | Objective, meeting presentation | 6 (KPI parked) | 4/5 | 0 |
+| D04 minutes, meeting 3 | depth (negative case) | 4/5 | Act of Communication | 2 | 4/5 | 0 |
+| D05 minutes, meeting 4 | depth | 8/8 | — | 0 | **5/5** (CQ1 now answerable) | 0 |
+| D06 follow-up letter | language | 1/2 | official letter | 5 | 5/5 | 0 |
+| D07 conflicting status note | — | **rejected**: inconsistent | | | | |
+
+Full log: [`results/extendability/ingest-log.md`](results/extendability/ingest-log.md).
+
+**Three results.**
+
+- **No document minted an OWL class.** The six documents added 56 individuals and 14 labels. The only new term, *KPI*, was parked as a SKOS concept (`:concept_kpi`), because no competency question needs it yet.
+- **Nothing broke.** 0 regressions across 6 ingestions. **After D06, CQ1–CQ5 return exactly the answers of the one-shot build in `results/`.** Loading the documents one by one ends in the same place as loading them all at once.
+- **The conflict was caught.** D07 types M06 v1.1 as a Planned Act, which confuses the mandate with the work it requires. HermiT finds it inconsistent: the minutes have M06 v1.1 as a continuant part, `has continuant part` has range continuant, and BFO makes continuant and occurrent disjoint. Explanation: [`results/extendability/after-D07/explanation.md`](results/extendability/after-D07/explanation.md).
+
+**Questions only the named graphs can answer.** These run on [`results/extendability/program-a.trig`](results/extendability/program-a.trig): one graph per accepted document, plus a `graph/base` holding the pattern and the CCO module.
+
+| Question | Query | Result |
+|---|---|---|
+| X01: which documents is each mandate known from? | `queries/extendability/x01-provenance.rq` | M06 v1.1 from D05 and D06; every other mandate from one set of minutes |
+| X02: what did document D add to things already known? | `x02-what-changed.rq` (D05) | 6 facts: the three `precedes` links back to D01/D02, and three `prescribes` links from D03's objectives |
+| X04: which mandates rest on one source? | `x04-corroboration.rq` | 6 of 7; only M06 v1.1 is corroborated |
+| V04: which words did each document add? | `v04-new-terms.rq` | 14 labels across D02, D03, D04, D06 |
+
+**Limits.** The documents are synthetic and small, so the counts show the mechanism rather than a trend. Provenance stops at the document: real minutes would also carry a page and a quote for each assertion. The regression check is only as strong as the five CQs.
 
 ## Where v0.1 goes beyond the v2 pattern documents
 

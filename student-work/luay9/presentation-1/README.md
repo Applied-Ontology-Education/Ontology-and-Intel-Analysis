@@ -7,6 +7,7 @@
 | [`course-reflection/01-definition.md`](course-reflection/01-definition.md) | Step 1: my definition tested against *Military Intelligence Part 1* (definitions as ⟨T, E⟩, counterexamples, negative language), with the v2 definitions |
 | [`course-reflection/02-document-acts.md`](course-reflection/02-document-acts.md) | Steps 2 and 5: *Document Acts* applied. Deciding (speech act) and documenting (document act) are split, and the mandate identifier is added. Revised pattern + lint |
 | [`course-reflection/03-file-engineering-iao-alignment.md`](course-reflection/03-file-engineering-iao-alignment.md) | File Engineering (the method behind the pattern) aligned to IAO, following IAO-Intel. Synthetic timeline |
+| [`course-reflection/04-sustained-extendability.md`](course-reflection/04-sustained-extendability.md) | **Next step (2026-11-11):** sustained extendability. Every new deck or set of minutes adds depth, breadth or language to the base without breaking it. Course readings applied, implemented and tested in `final-project/ontology/` (BUILD.md §7). Presented in [`../presentation-2/`](../presentation-2/) |
 | [`course-reflection/pattern-v2-triples.tsv`](course-reflection/pattern-v2-triples.tsv) | The revised pattern as triples (lint: PASS, 0 errors) |
 | [`design-pattern-assistant/`](design-pattern-assistant/) | Steps 3–5 as presented on 2026-09-29: slot sort, BFO/CCO mapping, workshop |
 | [`diagrams/`](diagrams/) | `Meeting.bpmn` (open at <https://demo.bpmn.io>), pattern v1 and v2, synthetic timeline |

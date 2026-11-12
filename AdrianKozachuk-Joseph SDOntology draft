@@ -1,0 +1,14 @@
+## 1. Public Health Interfacing Ontology - An ontology of the Social Determinants of Health as related to the Onondaga County Health Department
+
+2. American public health information management suffers from a number of the same issues as Military intelligence analysis: siloing between programs and databases leads to inefficiency and redundancy, confidentiality (or HIPAA in the case of public health) makes information sharing difficult, and the definition of terms is rarely, if ever, uniformly applied. I intend to model the domain of an individual's potential interactions with the various programs and services offered by a local health department, in this case the Onondaga County Health department, based on an analysis of an individual's Social Determinants of Health. From an intelligence-analysis perspective, being able to accurately model what services any given individual may be eligible for and interact with based on their demography creates opportunities to obtain both access to and intelligence about the targeted individual, whether that information involves protected health information (PHI) and otherwise. 
+
+3. This ontology will represent the potential relationships between a given individual and the particular Social Determinants of Health that render them eligible for Health Department services. This is not an attempt at a full ontology of Social Determinants of Health, but rather a precise domain analysis.
+
+4. Some competency questions for this ontology include
+"Does this person qualify for a free mammogram? 
+"Can this person recieve peer services from the Substance Use Initiatives?"
+"Can this person recieve free home lead testing?"
+
+5. This ontology will be heavily informed by the [Social Determinants of Health Domain Ontology](https://arxiv.org/abs/2211.07837) (SOHO) from Kollapally et al. 
+
+6. I plan on adapting the aforementioned SOHO ontology and synthesizing this with the [SDoH ontology (SDoHO)](https://pubmed.ncbi.nlm.nih.gov/37301740/) from Dang et al, but limiting it in scope to relate specifically to the public-facing programs offered by the Onondaga County Health department.

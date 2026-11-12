@@ -1,0 +1,8 @@
+id,type,date,expected,status,triples,new_individuals,facts_on_existing,links_into_base,classes_reused,classes_first_used,new_owl_classes,new_labels,labels_added,parked_terms,cqs_answered,answer_rows,newly_answerable,regressions,note
+D01,minutes,2025-07-10,base,accepted,73,16,0,0,0/11,Act of Directive Communication; Act of Meeting; Act of Official Documentation; Authority Role; Group of Persons; Information Bearing Entity; Person; Planned Act; mandate; mandate identifier; meeting minutes,0,0,,,4,7,"CQ2, CQ3, CQ4, CQ5",0,
+D02,minutes,2025-09-18,depth,accepted,59,12,0,6,8/8,,0,1,تكليف (ar),,4,14,,0,
+D03,presentation,2025-10-15,breadth,accepted,28,5,0,4,1/3,Objective; meeting presentation,0,6,KPI (en); deck (en); key performance indicator (en); عرض تقديمي (ar); مؤشر أداء رئيسي (ar); هدف (ar),concept_kpi,4,14,,0,
+D04,minutes,2025-10-16,depth,accepted,25,5,0,4,4/5,Act of Communication,0,2,MoM (en); محضر (ar),,4,14,,0,
+D05,minutes,2026-02-24,depth,accepted,85,16,6,8,8/8,,0,0,,,5,27,CQ1,0,
+D06,letter,2026-03-05,language,accepted,14,2,0,2,1/2,official letter,0,5,directive (en); follow-up letter (en); mandate no. (en); خطاب متابعة (ar); رقم التكليف (ar),,5,28,,0,
+D07,status note,2026-03-20,rejected,rejected,1,,,,,,,,,,,,,,inconsistent; base kept as after D06

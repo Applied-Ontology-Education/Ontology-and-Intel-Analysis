@@ -1,0 +1,63 @@
+# Synthetic document D04 for the sustained-extendability test (see EXTENDABILITY.md).
+# No real people, organisations or programmes. One file = one document = one named graph.
+
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+#  Relation declarations (the same block in every file; see BUILD.md)
+#################################################################
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+skos:altLabel   a owl:AnnotationProperty .
+skos:prefLabel  a owl:AnnotationProperty .
+skos:scopeNote  a owl:AnnotationProperty .
+
+<https://github.com/luay9/meeting-mandate/graph/D04> a owl:Ontology ;
+    dcterms:title "D04: minutes of meeting 3 (status briefing)"@en ;
+    dcterms:date "2025-10-16" ;
+    dcterms:description "Depth, and a negative case. Nothing is decided, so the reasoner must not classify meeting 3 as a decision meeting. The meeting uses the deck from D03."@en .
+
+:meeting_3 a owl:NamedIndividual , cco:ont00000144 ;     # Act of Meeting
+    rdfs:label "meeting 3 (status briefing)"@en ;
+    cco:ont00001833 :attendees_1 ;
+    obo:BFO_0000057 :deck_3 ;                             # has participant (the deck from D03)
+    obo:BFO_0000117 :briefing_3 .
+
+:briefing_3 a owl:NamedIndividual , cco:ont00000402 ;    # Act of Communication (not directive)
+    rdfs:label "progress briefing, meeting 3"@en ;
+    cco:ont00001833 :secretary_1 ;
+    obo:BFO_0000063 :documenting_3 .
+
+:documenting_3 a owl:NamedIndividual , cco:ont00000438 ;
+    rdfs:label "documenting meeting 3"@en ;
+    cco:ont00001833 :secretary_1 ;
+    cco:ont00001986 :minutes_file_3 .
+
+:minutes_file_3 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "minutes file, meeting 3"@en ;
+    obo:BFO_0000101 :minutes_3 .
+
+# Minutes with no mandate in them.
+:minutes_3 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 3"@en .
+
+:MeetingMinutes skos:altLabel "محضر"@ar , "MoM"@en .

@@ -1,0 +1,11 @@
+# Custom ROBOT report rule: a class in this ontology's namespace with no
+# Arabic skos:prefLabel.
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?entity ?property ?value WHERE {
+  VALUES ?property { skos:prefLabel }
+  ?entity a owl:Class .
+  FILTER (STRSTARTS(STR(?entity), "https://github.com/luay9/meeting-mandate#"))
+  FILTER NOT EXISTS { ?entity skos:prefLabel ?l FILTER (LANGMATCHES(LANG(?l), "ar")) }
+}
+ORDER BY ?entity

@@ -1,0 +1,18 @@
+# CQ1. Which mandates has the chair had to issue more than once?
+# A re-issue is a later act of deciding, preceded by an earlier one,
+# each with a mandate as output. The identifiers give the human-readable IDs.
+PREFIX :     <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:  <https://www.commoncoreontologies.org/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?earlierID ?laterID WHERE {
+  ?d1 cco:ont00001986 ?earlier .                 # has output
+  ?d2 cco:ont00001986 ?later .
+  ?earlier a :Mandate .
+  ?later   a :Mandate .
+  ?d1 obo:BFO_0000063 ?d2 .                      # precedes
+  ?i1 cco:ont00001916 ?earlier ; rdfs:label ?earlierID .   # designates
+  ?i2 cco:ont00001916 ?later   ; rdfs:label ?laterID .
+}
+ORDER BY ?earlierID

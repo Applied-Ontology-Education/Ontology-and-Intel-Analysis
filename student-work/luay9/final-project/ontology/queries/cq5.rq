@@ -1,0 +1,16 @@
+# CQ5. What work does a mandate prescribe, and which objective does it serve?
+# The mandate and the objective both prescribe the same planned act.
+PREFIX :     <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:  <https://www.commoncoreontologies.org/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?mandateID ?work ?objective WHERE {
+  ?m a :Mandate ; cco:ont00001942 ?w .           # prescribes
+  ?w a cco:ont00000228 ; rdfs:label ?work .      # Planned Act
+  ?id cco:ont00001916 ?m ; rdfs:label ?mandateID .
+  OPTIONAL {
+    ?o a cco:ont00000476 ; cco:ont00001942 ?w ; rdfs:label ?objective .   # Objective
+  }
+}
+ORDER BY ?mandateID

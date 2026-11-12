@@ -1,0 +1,1150 @@
+@prefix : <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged> .
+
+<https://www.commoncoreontologies.org/CommonCoreOntologiesMerged> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+<https://www.commoncoreontologies.org/ont00001754> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+<https://www.commoncoreontologies.org/ont00001760> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "206-BFO" ;
+                                             rdfs:label "has realization"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "realized in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has realization c =Def c realizes b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "059-BFO" ;
+                                             rdfs:label "realizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "250-BFO" ;
+                                             rdfs:label "participates in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000057
+<http://purl.obolibrary.org/obo/BFO_0000057> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "248-BFO" ;
+                                             rdfs:label "has participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "p has participant c =Def c participates in p"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000058
+<http://purl.obolibrary.org/obo/BFO_0000058> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "258-BFO" ;
+                                             rdfs:label "is concretized by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "c is concretized by b =Def b concretizes c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000059
+<http://purl.obolibrary.org/obo/BFO_0000059> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "256-BFO" ;
+                                             rdfs:label "concretizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000062
+<http://purl.obolibrary.org/obo/BFO_0000062> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000063> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "213-BFO" ;
+                                             rdfs:label "preceded by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b preceded by c =Def b precedes c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The temporal region occupied by the second half of the match is preceded by the temporal region occupied by the first half of the match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+<http://purl.obolibrary.org/obo/BFO_0000063> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "270-BFO" ;
+                                             rdfs:label "precedes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The temporal region occupied by Mary's birth precedes the temporal region occupied by Mary's death."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Each temporal region is its own temporal extent. The temporal extent of a spatiotemporal region is the temporal region it temporally projects onto. The temporal extent of a process or process boundary that occupies temporal region t is t." ,
+                                                                                             "Precedes defines a strict partial order on occurrents." .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000084
+<http://purl.obolibrary.org/obo/BFO_0000084> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "252-BFO" ;
+                                             rdfs:label "generically depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "g-depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000101
+<http://purl.obolibrary.org/obo/BFO_0000101> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "254-BFO" ;
+                                             rdfs:label "is carrier of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000115
+<http://purl.obolibrary.org/obo/BFO_0000115> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000129> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "230-BFO" ;
+                                             rdfs:label "has member part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has member part c =Def c member part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+<http://purl.obolibrary.org/obo/BFO_0000117> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "202-BFO" ;
+                                             rdfs:label "has occurrent part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has occurrent part c =Def c occurrent part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Mary's life has occurrent part Mary's 5th birthday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000129
+<http://purl.obolibrary.org/obo/BFO_0000129> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "228-BFO" ;
+                                             rdfs:label "member part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b member part of c =Def b is an object & c is a material entity & there is some time t such that b continuant part of c at t & there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 <= i <= n)"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+<http://purl.obolibrary.org/obo/BFO_0000132> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "003-BFO" ;
+                                             rdfs:label "occurrent part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "221-BFO" ;
+                                             rdfs:label "continuant part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "271-BFO" ;
+                                             rdfs:label "has continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has continuant part c =Def c continuant part of b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000194
+<http://purl.obolibrary.org/obo/BFO_0000194> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "260-BFO" ;
+                                             rdfs:label "specifically depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "s-depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b specifically depended on by c =Def c specifically depends on b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Coloured object specifically depended on by colour"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000195
+<http://purl.obolibrary.org/obo/BFO_0000195> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "012-BFO" ;
+                                             rdfs:label "specifically depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "s-depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common & b is of a nature such that at all times t it cannot exist unless c exists & b is not a boundary of c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "The analogue of specifically depends on for occurrents is has participant."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+<http://purl.obolibrary.org/obo/BFO_0000196> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000194> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "053-BFO" ;
+                                             rdfs:label "bearer of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b bearer of c =Def c inheres in b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "051-BFO" ;
+                                             rdfs:label "inheres in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001787
+<https://www.commoncoreontologies.org/ont00001787> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001833> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "agent in"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x agent_in y iff y is an instance of Process and x is an instance of Agent, such that x is causally active in y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001801
+<https://www.commoncoreontologies.org/ont00001801> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "is subject of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is subject of y =Def y is about x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001808
+<https://www.commoncoreontologies.org/ont00001808> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "is about"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_about y is a primitive relationship between an instance of Information Content Entity x and an instance of Entity y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000136" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001816
+<https://www.commoncoreontologies.org/ont00001816> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001986> ;
+                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                               <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                               [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                      [ rdf:type owl:Class ;
+                                                                                                        owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                             )
+                                                               ] ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "is output of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is output of y =Def x participates in y, x is an Independent Continuant (but not a Spatial Region), y is a Process, and the presence of x at the end of y is a necessary condition for the completion of y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001833
+<https://www.commoncoreontologies.org/ont00001833> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:label "has agent"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x has agent y =Def y agent in x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001879
+<https://www.commoncoreontologies.org/ont00001879> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001801> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001916> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "designated by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x designated by y =Def y designates x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001916
+<https://www.commoncoreontologies.org/ont00001916> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "designates"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x designates y iff x is an instance of a Designative Information Content Entity, and y is an instance of an Entity, such that given some context, x uniquely distinguishes y from other entities."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "a URL designates the location of a Web Page on the internet" ,
+                                                                                                 "a person's name designates that person" ,
+                                                                                                 "a vehicle identification number designates some vehicle" ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001920
+<https://www.commoncoreontologies.org/ont00001920> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001801> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001942> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "prescribed by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prescribed by y =Def y prescribes x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001942
+<https://www.commoncoreontologies.org/ont00001942> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "prescribes"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A blueprint prescribes some artifact or facility by being a model for it." ,
+                                                                                                 "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations." ,
+                                                                                                 "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation." ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001986
+<https://www.commoncoreontologies.org/ont00001986> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                              <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                              [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                     [ rdf:type owl:Class ;
+                                                                                                       owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ]
+                                                                            )
+                                                              ] ;
+                                                   rdfs:label "has output"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x has output y =Def y is output of x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=IPO_model&oldid=1024398398"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+<http://purl.obolibrary.org/obo/BFO_0000001> rdf:type owl:Class ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "001-BFO" ;
+                                             rdfs:label "entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000002
+<http://purl.obolibrary.org/obo/BFO_0000002> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000002>
+                                                             ] ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "008-BFO" ;
+                                             rdfs:label "continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+<http://purl.obolibrary.org/obo/BFO_0000003> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "077-BFO" ;
+                                             rdfs:label "occurrent"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+<http://purl.obolibrary.org/obo/BFO_0000004> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "017-BFO" ;
+                                             rdfs:label "independent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000006
+<http://purl.obolibrary.org/obo/BFO_0000006> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "035-BFO" ;
+                                             rdfs:label "spatial region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000008
+<http://purl.obolibrary.org/obo/BFO_0000008> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000008>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "100-BFO" ;
+                                             rdfs:label "temporal region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A temporal region is an occurrent over which processes can unfold"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for zero-dimensional temporal region and one-dimensional temporal region"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000011
+<http://purl.obolibrary.org/obo/BFO_0000011> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000011>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "095-BFO" ;
+                                             rdfs:label "spatiotemporal region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The spatiotemporal region occupied by the development of a cancer tumour; the spatiotemporal region occupied by an orbiting satellite"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "'Spacetime' here refers to the maximal instance of the universal spatiotemporal region."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+<http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                                               )
+                                                                                 ]
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "083-BFO" ;
+                                             rdfs:label "process"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "event"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+<http://purl.obolibrary.org/obo/BFO_0000016> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "062-BFO" ;
+                                             rdfs:label "disposition"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "internally-grounded realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+<http://purl.obolibrary.org/obo/BFO_0000017> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "058-BFO" ;
+                                             rdfs:label "realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+<http://purl.obolibrary.org/obo/BFO_0000020> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "050-BFO" ;
+                                             rdfs:label "specifically dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en ,
+                                                                                           "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+<http://purl.obolibrary.org/obo/BFO_0000023> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "061-BFO" ;
+                                             rdfs:label "role"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "externally-grounded realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000027
+<http://purl.obolibrary.org/obo/BFO_0000027> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "025-BFO" ;
+                                             rdfs:label "object aggregate"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "'Exactly' means that there are no parts of the object aggregate other than its member parts." ,
+                                                                                             "The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts." .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+<http://purl.obolibrary.org/obo/BFO_0000029> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                               )
+                                                                                 ]
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000140>
+                                                                                               )
+                                                                                 ]
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "034-BFO" ;
+                                             rdfs:label "site"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+<http://purl.obolibrary.org/obo/BFO_0000030> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "024-BFO" ;
+                                             rdfs:label "object"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000031
+<http://purl.obolibrary.org/obo/BFO_0000031> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "074-BFO" ;
+                                             rdfs:label "generically dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "g-dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000035
+<http://purl.obolibrary.org/obo/BFO_0000035> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                                               )
+                                                                                 ]
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "084-BFO" ;
+                                             rdfs:label "process boundary"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "p is a process boundary =Def p is a temporal part of a process & p has no proper temporal parts"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The boundary between the 2nd and 3rd year of your life"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+<http://purl.obolibrary.org/obo/BFO_0000040> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000140>
+                                                                                               )
+                                                                                 ]
+                                                             ] ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000141> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "019-BFO" ;
+                                             rdfs:label "material entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000140
+<http://purl.obolibrary.org/obo/BFO_0000140> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000140>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "029-BFO" ;
+                                             rdfs:label "continuant fiat boundary"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions & such that there is no time t when b has a spatial region as continuant part & whose location is determined in relation to some material entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for fiat point, fiat line, fiat surface"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000141
+<http://purl.obolibrary.org/obo/BFO_0000141> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "028-BFO" ;
+                                             rdfs:label "immaterial entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for fiat point, fiat line, fiat surface, site"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000005
+<https://www.commoncoreontologies.org/ont00000005> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process in which at least one Agent plays a causative role."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000133
+<https://www.commoncoreontologies.org/ont00000133> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000402> ;
+                                                   rdfs:label "Act of Directive Communication"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Communication that is intended to cause the hearer to take a particular action."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Examples: advising, admonishing, asking, begging, dismissing, excusing, forbidding, instructing, ordering, permitting, requesting, requiring, suggesting, urging, warning"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Derived (loosely) from: John Searle's Speech Acts: An Essay in the Philosophy of Language" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000144
+<https://www.commoncoreontologies.org/ont00000144> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> ;
+                                                   rdfs:label "Act of Meeting"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Association wherein two or more Persons assemble for some common purpose."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://wordnetweb.princeton.edu/perl/webwn?s=meet (Sense Key: meet%2:41:00, get together%2:41:00)" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000187
+<https://www.commoncoreontologies.org/ont00000187> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                   rdfs:label "Authority Role"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Role that is realized by Processes which create, modify, transfer, or eliminate Process Regulations or other Authority Roles, and inheres in an Agent in virtue of collective acceptance of that Agent's ability to issue binding directives."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Authority Roles are externally grounded in a social group's collective acceptance of the binding force of the agent's directives. This acceptance can be direct or indirect (e.g., by accepting a procedure for deputizing authority). Such collective acceptance need not be explicit or cognized; rather, collective acceptance can be expressed in the dispositions and attitudes of people toward that agent's directives. In many cases, the directives issued by Authority Roles are backed by threats of punishment or sanction for failure to comply, but the issuing of a directive plus a threat is not sufficient for authority. Rather, an agent's authority must be accepted either directly or indirectly through the acceptance of a procedure for bestowing authority (e.g., elections)."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000228
+<https://www.commoncoreontologies.org/ont00000228> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000005>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                                                                                owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                                                            owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000016>
+                                                                                                                                                          <http://purl.obolibrary.org/obo/BFO_0000023>
+                                                                                                                                                        )
+                                                                                                                                          ]
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                                                                                                                            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000965>
+                                                                                                                                          ]
+                                                                                                                                        ) ;
+                                                                                                                     rdf:type owl:Class
+                                                                                                                   ]
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000005> ;
+                                                   rdfs:label "Planned Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Intentional Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000253
+<https://www.commoncoreontologies.org/ont00000253> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000030>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                                                   rdfs:label "Information Bearing Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "IBE"@en ,
+                                                                                                  "Information Carrying Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Object upon which an Information Content Entity generically depends."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "This class continues to use the word ‘bearing’ in its rdfslabel because of potential confusion with the acronym ‘ICE’, which is widely used for information content entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000178"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000300
+<https://www.commoncoreontologies.org/ont00000300> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ,
+                                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000115> ;
+                                                                                            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001017>
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000115> ;
+                                                                                            owl:allValuesFrom <https://www.commoncoreontologies.org/ont00001017>
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                                   rdfs:label "Group of Agents"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Object Aggregate that has only Agents as member parts."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000390
+<https://www.commoncoreontologies.org/ont00000390> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000686>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "Spatial Region Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Information Content Entity that designates some Spatial Region."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000399
+<https://www.commoncoreontologies.org/ont00000399> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000686>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000008>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "Temporal Region Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Information Content Entity that designates some Temporal Region."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000402
+<https://www.commoncoreontologies.org/ont00000402> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                                   rdfs:label "Act of Communication"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act in which the objective is to create a concretization of some Information Content Entity in one or more recipients."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Act of Communication is not intended to be a success term - a term that only applies when the act it denotes is successful. While successful communication is the goal, it is important that instances of this class can include both better and worse communication acts as well attempted communications that fail altogether."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Communication&oldid=1063752020"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000433
+<https://www.commoncoreontologies.org/ont00000433> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001327> ;
+                                                   rdfs:label "Act of Association"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://en.wiktionary.org/wiki/associate" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000438
+<https://www.commoncoreontologies.org/ont00000438> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001374> ;
+                                                   rdfs:label "Act of Official Documentation"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Declarative Communication in which an Agent records some information for official use by another Agent."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000476
+<https://www.commoncoreontologies.org/ont00000476> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "Objective"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Prescriptive Information Content Entity that prescribes some projected state that some Agent intends to achieve."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://en.wikipedia.org/wiki/Objective_(goal)" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000551
+<https://www.commoncoreontologies.org/ont00000551> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                                                   rdfs:label "Organism"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Object that is an Animal or Plant."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000562
+<https://www.commoncoreontologies.org/ont00000562> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000551> ;
+                                                   rdfs:label "Animal"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Animal&oldid=1063873549"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000649
+<https://www.commoncoreontologies.org/ont00000649> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "Non-Name Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "ID"@en ,
+                                                                                                  "Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified namespace or context, is not a Designative Name, may be automatically or randomly generated, and typically has no preexisting cultural or social significance."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000686
+<https://www.commoncoreontologies.org/ont00000686> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   owl:disjointWith <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "Designative Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Designative ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of symbols that designate some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000914
+<https://www.commoncoreontologies.org/ont00000914> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000300> ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                     owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001262>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                     owl:allValuesFrom <https://www.commoncoreontologies.org/ont00001262>
+                                                                   ] ;
+                                                   rdfs:label "Group of Persons"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Group of Agents that has only Persons as member parts."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000958
+<https://www.commoncoreontologies.org/ont00000958> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001808> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                                   rdfs:label "Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000030" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000965
+<https://www.commoncoreontologies.org/ont00000965> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "Prescriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Directive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that prescribes some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001017
+<https://www.commoncoreontologies.org/ont00001017> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001379>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                   rdfs:label "Agent"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that bears an Agent Capability."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001262
+<https://www.commoncoreontologies.org/ont00001262> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000562> ;
+                                                   rdfs:label "Person"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Human"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Animal that is a member of the species Homo sapiens."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001324
+<https://www.commoncoreontologies.org/ont00001324> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "Process Regulation"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Prescriptive Information Content Entity that prescribes an Process as required, prohibited, or permitted, and is the output of an Process which realizes some Authority Role."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Although regulations often regulate processes which involve agents--as the regulating or regulated participant--it is unclear how causally active an agents need to be in those regulated processes. For example, it is not clear how causally active a human agent is in the process of a traffic light regulating the motion of a self-driving vehicle."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001327
+<https://www.commoncoreontologies.org/ont00001327> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                                   rdfs:label "Social Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://en.wiktionary.org/wiki/commually" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001374
+<https://www.commoncoreontologies.org/ont00001374> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000402> ;
+                                                   rdfs:label "Act of Declarative Communication"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Communication that changes the reality in accord with the content of the declaration."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Examples: Baptism, Sentencing a person to imprisonment, Pronouncing a couple husband and wife, Declaring war"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Derived (loosely) from: John Searle's Speech Acts: An Essay in the Philosophy of Language" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001379
+<https://www.commoncoreontologies.org/ont00001379> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                                   rdfs:label "Agent Capability"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00002001
+<https://www.commoncoreontologies.org/ont00002001> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "Media Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity presented in a canonical media format."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "By 'canonical', it is intended that the media format is of a commonly recognized format, such as mass media formats such as books, magazines, and journals, as well as digital media forms (e.g. ebooks), to include, too, file types, such as those recognized by the Internet Assigned Numbers Authority (IANA)'s Media Types standard [RFC2046]." ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00002039
+<https://www.commoncoreontologies.org/ont00002039> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> ;
+                                                   rdfs:label "Document Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Document"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Media Content Entity that consists of a series of paragraphs of text or diagrams that are intended to be carried by physical pieces of paper or an electronic word processor file."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Document&oldid=1057829688"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00002043
+<https://www.commoncoreontologies.org/ont00002043> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> ;
+                                                   rdfs:label "Report"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Document Content entity that conveys an account of some event, situation, or the result of some observation or inquiry."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Report&oldid=1063765657"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00002076
+<https://www.commoncoreontologies.org/ont00002076> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000402> ;
+                                                   rdfs:label "Act of Communication Mediated by Artifact"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Communication in which technology is used to create a new copy of the Information Content Entity in the recipient."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                <http://purl.obolibrary.org/obo/BFO_0000020>
+                <http://purl.obolibrary.org/obo/BFO_0000031>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000006>
+                <http://purl.obolibrary.org/obo/BFO_0000029>
+                <http://purl.obolibrary.org/obo/BFO_0000140>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000008>
+                <http://purl.obolibrary.org/obo/BFO_0000011>
+                <http://purl.obolibrary.org/obo/BFO_0000015>
+                <http://purl.obolibrary.org/obo/BFO_0000035>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

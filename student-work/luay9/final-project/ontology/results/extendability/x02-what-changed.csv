@@ -1,0 +1,7 @@
+subject,predicate,object,firstSeenIn
+Program A objective 1: operating model in place,prescribes,narrow programme scope,D03: presentation for meeting 3
+Program A objective 1: operating model in place,prescribes,close operating model gaps and resubmit,D03: presentation for meeting 3
+Program A objective 2: partners engaged,prescribes,assign roles and set KPIs,D03: presentation for meeting 3
+deciding M01 v1.0,precedes,deciding M01 v1.1,D01: minutes of meeting 1
+deciding M05 v1.0,precedes,deciding M05 v1.1,D02: minutes of meeting 2
+deciding M06 v1.0,precedes,deciding M06 v1.1,D02: minutes of meeting 2

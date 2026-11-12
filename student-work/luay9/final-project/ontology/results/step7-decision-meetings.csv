@@ -1,0 +1,5 @@
+meeting,label,isDecisionMeeting
+https://github.com/luay9/meeting-mandate#meeting_1,meeting 1,true
+https://github.com/luay9/meeting-mandate#meeting_2,meeting 2,true
+https://github.com/luay9/meeting-mandate#meeting_3,meeting 3 (status briefing),false
+https://github.com/luay9/meeting-mandate#meeting_4,meeting 4,true

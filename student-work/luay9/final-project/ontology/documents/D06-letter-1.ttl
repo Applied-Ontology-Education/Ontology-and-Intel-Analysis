@@ -1,0 +1,49 @@
+# Synthetic document D06 for the sustained-extendability test (see EXTENDABILITY.md).
+# No real people, organisations or programmes. One file = one document = one named graph.
+
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+#  Relation declarations (the same block in every file; see BUILD.md)
+#################################################################
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+skos:altLabel   a owl:AnnotationProperty .
+skos:prefLabel  a owl:AnnotationProperty .
+skos:scopeNote  a owl:AnnotationProperty .
+
+<https://github.com/luay9/meeting-mandate/graph/D06> a owl:Ontology ;
+    dcterms:title "D06: follow-up letter on M06 v1.1"@en ;
+    dcterms:date "2026-03-05" ;
+    dcterms:description "Mostly language, plus one cross-document link. The letter cites mandate M06 v1.1 by its identifier, so it attaches to the same mandate as the minutes without pointing at them. Its words become new labels on classes that already exist."@en .
+
+:letter_1 a owl:NamedIndividual , :OfficialLetter ;
+    rdfs:label "follow-up letter on M06 v1.1"@en ;
+    obo:BFO_0000178 :m06_v1_1 , :id_m06_v1_1 .            # has continuant part (both from D05)
+
+:letter_file_1 a owl:NamedIndividual , cco:ont00000253 ; # Information Bearing Entity
+    rdfs:label "letter file 1"@en ;
+    obo:BFO_0000101 :letter_1 .
+
+:Mandate skos:altLabel "directive"@en .
+:MandateIdentifier skos:altLabel "رقم التكليف"@ar , "mandate no."@en .
+:OfficialLetter skos:altLabel "خطاب متابعة"@ar , "follow-up letter"@en .

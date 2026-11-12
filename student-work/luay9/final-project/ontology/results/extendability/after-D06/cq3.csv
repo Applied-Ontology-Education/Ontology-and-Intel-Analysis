@@ -1,0 +1,9 @@
+mandateID,documentType,document,file
+M01 v1.0,meeting minutes,minutes of meeting 1,"minutes file, meeting 1"
+M01 v1.1,meeting minutes,minutes of meeting 4,"minutes file, meeting 4"
+M02 v1.0,meeting minutes,minutes of meeting 1,"minutes file, meeting 1"
+M05 v1.0,meeting minutes,minutes of meeting 2,"minutes file, meeting 2"
+M05 v1.1,meeting minutes,minutes of meeting 4,"minutes file, meeting 4"
+M06 v1.0,meeting minutes,minutes of meeting 2,"minutes file, meeting 2"
+M06 v1.1,meeting minutes,minutes of meeting 4,"minutes file, meeting 4"
+M06 v1.1,official letter,follow-up letter on M06 v1.1,letter file 1

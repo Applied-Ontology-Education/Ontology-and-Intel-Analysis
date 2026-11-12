@@ -1,0 +1,17 @@
+# X01. Which documents is each mandate known from?
+# One named graph per document, so provenance is the graph a fact sits in.
+# Runs over the named-graph dataset (results/extendability/program-a.trig),
+# not over the reasoned file, which has merged the graphs away.
+PREFIX :        <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:     <https://www.commoncoreontologies.org/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?mandateID (COUNT(DISTINCT ?g) AS ?documents)
+       (GROUP_CONCAT(DISTINCT ?doc; separator=" | ") AS ?sources)
+WHERE {
+  GRAPH ?gm { ?m a :Mandate . ?id cco:ont00001916 ?m ; rdfs:label ?mandateID . }
+  GRAPH ?g  { { ?m ?p ?o } UNION { ?s ?p ?m } ?g dcterms:title ?doc . }
+}
+GROUP BY ?mandateID
+ORDER BY ?mandateID

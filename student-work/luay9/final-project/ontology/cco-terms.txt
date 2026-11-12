@@ -1,0 +1,31 @@
+# classes
+https://www.commoncoreontologies.org/ont00000144 # Act of Meeting
+https://www.commoncoreontologies.org/ont00000133 # Act of Directive Communication
+https://www.commoncoreontologies.org/ont00000438 # Act of Official Documentation
+https://www.commoncoreontologies.org/ont00002076 # Act of Communication Mediated by Artifact
+https://www.commoncoreontologies.org/ont00001324 # Process Regulation
+https://www.commoncoreontologies.org/ont00000187 # Authority Role
+https://www.commoncoreontologies.org/ont00002043 # Report
+https://www.commoncoreontologies.org/ont00002039 # Document Content Entity
+https://www.commoncoreontologies.org/ont00000253 # Information Bearing Entity
+https://www.commoncoreontologies.org/ont00000649 # Non-Name Identifier
+https://www.commoncoreontologies.org/ont00000914 # Group of Persons
+https://www.commoncoreontologies.org/ont00001262 # Person
+https://www.commoncoreontologies.org/ont00000228 # Planned Act
+https://www.commoncoreontologies.org/ont00000958 # Information Content Entity
+https://www.commoncoreontologies.org/ont00000476 # Objective
+# relations
+https://www.commoncoreontologies.org/ont00001833 # has agent
+https://www.commoncoreontologies.org/ont00001986 # has output
+https://www.commoncoreontologies.org/ont00001942 # prescribes
+https://www.commoncoreontologies.org/ont00001916 # designates
+http://purl.obolibrary.org/obo/BFO_0000055 # realizes
+http://purl.obolibrary.org/obo/BFO_0000057 # has participant
+http://purl.obolibrary.org/obo/BFO_0000063 # precedes
+http://purl.obolibrary.org/obo/BFO_0000101 # is carrier of
+http://purl.obolibrary.org/obo/BFO_0000117 # has occurrent part
+http://purl.obolibrary.org/obo/BFO_0000178 # has continuant part
+http://purl.obolibrary.org/obo/BFO_0000196 # bearer of
+https://www.commoncoreontologies.org/ont00001816 # is output of
+http://purl.obolibrary.org/obo/BFO_0000132 # occurrent part of
+http://purl.obolibrary.org/obo/BFO_0000115 # has member part

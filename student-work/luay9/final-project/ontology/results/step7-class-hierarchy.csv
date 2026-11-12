@@ -1,0 +1,7 @@
+class,super,superLabel
+https://github.com/luay9/meeting-mandate#DecisionMeeting,https://www.commoncoreontologies.org/ont00000144,Act of Meeting
+https://github.com/luay9/meeting-mandate#Mandate,https://www.commoncoreontologies.org/ont00001324,Process Regulation
+https://github.com/luay9/meeting-mandate#MandateIdentifier,https://www.commoncoreontologies.org/ont00000649,Non-Name Identifier
+https://github.com/luay9/meeting-mandate#MeetingMinutes,https://www.commoncoreontologies.org/ont00002043,Report
+https://github.com/luay9/meeting-mandate#MeetingPresentation,https://www.commoncoreontologies.org/ont00002039,Document Content Entity
+https://github.com/luay9/meeting-mandate#OfficialLetter,https://www.commoncoreontologies.org/ont00002039,Document Content Entity

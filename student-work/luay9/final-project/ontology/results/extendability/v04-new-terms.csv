@@ -1,0 +1,15 @@
+document,term,label,language
+D02: minutes of meeting 2,mandate,تكليف,ar
+D03: presentation for meeting 3,Objective,هدف,ar
+D03: presentation for meeting 3,concept_kpi,مؤشر أداء رئيسي,ar
+D03: presentation for meeting 3,concept_kpi,KPI,en
+D03: presentation for meeting 3,concept_kpi,key performance indicator,en
+D03: presentation for meeting 3,meeting presentation,عرض تقديمي,ar
+D03: presentation for meeting 3,meeting presentation,deck,en
+D04: minutes of meeting 3 (status briefing),meeting minutes,محضر,ar
+D04: minutes of meeting 3 (status briefing),meeting minutes,MoM,en
+D06: follow-up letter on M06 v1.1,mandate,directive,en
+D06: follow-up letter on M06 v1.1,mandate identifier,رقم التكليف,ar
+D06: follow-up letter on M06 v1.1,mandate identifier,mandate no.,en
+D06: follow-up letter on M06 v1.1,official letter,خطاب متابعة,ar
+D06: follow-up letter on M06 v1.1,official letter,follow-up letter,en

@@ -1,0 +1,1925 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mm: <https://github.com/luay9/meeting-mandate#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/luay9/meeting-mandate/graph/D04> {
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    mm:meeting_3 a owl:NamedIndividual,
+            cco:ont00000144 ;
+        rdfs:label "meeting 3 (status briefing)"@en ;
+        obo:BFO_0000057 mm:deck_3 ;
+        obo:BFO_0000117 mm:briefing_3 ;
+        cco:ont00001833 mm:attendees_1 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D04> a owl:Ontology ;
+        dcterms:date "2025-10-16" ;
+        dcterms:description "Depth, and a negative case. Nothing is decided, so the reasoner must not classify meeting 3 as a decision meeting. The meeting uses the deck from D03."@en ;
+        dcterms:title "D04: minutes of meeting 3 (status briefing)"@en .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+
+    mm:MeetingMinutes skos:altLabel "محضر"@ar,
+            "MoM"@en .
+
+    mm:briefing_3 a owl:NamedIndividual,
+            cco:ont00000402 ;
+        rdfs:label "progress briefing, meeting 3"@en ;
+        obo:BFO_0000063 mm:documenting_3 ;
+        cco:ont00001833 mm:secretary_1 .
+
+    mm:documenting_3 a owl:NamedIndividual,
+            cco:ont00000438 ;
+        rdfs:label "documenting meeting 3"@en ;
+        cco:ont00001833 mm:secretary_1 ;
+        cco:ont00001986 mm:minutes_file_3 .
+
+    mm:minutes_3 a owl:NamedIndividual,
+            mm:MeetingMinutes ;
+        rdfs:label "minutes of meeting 3"@en .
+
+    mm:minutes_file_3 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "minutes file, meeting 3"@en ;
+        obo:BFO_0000101 mm:minutes_3 .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/D02> {
+    mm:meeting_2 a owl:NamedIndividual,
+            cco:ont00000144 ;
+        rdfs:label "meeting 2"@en ;
+        obo:BFO_0000117 mm:deciding_m05_v1_0,
+            mm:deciding_m06_v1_0 ;
+        cco:ont00001833 mm:attendees_1 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D02> a owl:Ontology ;
+        dcterms:date "2025-09-18" ;
+        dcterms:description "Depth. The same kinds of thing as D01, only more of them: a second meeting and two more mandates. One new word: these minutes call a mandate by a different Arabic name."@en ;
+        dcterms:title "D02: minutes of meeting 2"@en .
+
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    mm:deciding_m05_v1_0 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M05 v1.0"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_2 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m05_v1_0 .
+
+    mm:deciding_m06_v1_0 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M06 v1.0"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_2 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m06_v1_0 .
+
+    mm:id_m05_v1_0 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M05 v1.0" ;
+        cco:ont00001916 mm:m05_v1_0 .
+
+    mm:id_m06_v1_0 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M06 v1.0" ;
+        cco:ont00001916 mm:m06_v1_0 .
+
+    mm:minutes_2 a owl:NamedIndividual,
+            mm:MeetingMinutes ;
+        rdfs:label "minutes of meeting 2"@en ;
+        obo:BFO_0000178 mm:id_m05_v1_0,
+            mm:id_m06_v1_0,
+            mm:m05_v1_0,
+            mm:m06_v1_0 .
+
+    mm:minutes_file_2 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "minutes file, meeting 2"@en ;
+        obo:BFO_0000101 mm:minutes_2 .
+
+    mm:work_m05_v1_0 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "assign roles"@en .
+
+    mm:work_m06_v1_0 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "design operating model"@en .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+
+    mm:Mandate skos:altLabel "تكليف"@ar .
+
+    mm:documenting_2 a owl:NamedIndividual,
+            cco:ont00000438 ;
+        rdfs:label "documenting meeting 2"@en ;
+        cco:ont00001833 mm:secretary_1 ;
+        cco:ont00001986 mm:minutes_file_2 .
+
+    mm:m05_v1_0 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M05 v1.0 (roles)"@en ;
+        cco:ont00001942 mm:work_m05_v1_0 .
+
+    mm:m06_v1_0 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M06 v1.0 (operating model)"@en ;
+        cco:ont00001942 mm:work_m06_v1_0 .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/D03> {
+    mm:concept_kpi a owl:NamedIndividual,
+            skos:Concept ;
+        skos:altLabel "KPI"@en ;
+        skos:prefLabel "مؤشر أداء رئيسي"@ar,
+            "key performance indicator"@en ;
+        skos:scopeNote "Parked in the vocabulary. It becomes a class only when a competency question needs it."@en .
+
+    mm:deck_file_3 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "deck file, meeting 3"@en ;
+        obo:BFO_0000101 mm:deck_3 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D03> a owl:Ontology ;
+        dcterms:date "2025-10-15" ;
+        dcterms:description "Breadth. The first deck. It brings in a new branch, the programme objectives, and links them to work that minutes D01 and D02 already hold. It also uses the term KPI, which is parked as a SKOS concept because no competency question needs it yet."@en ;
+        dcterms:title "D03: presentation for meeting 3"@en .
+
+    mm:MeetingPresentation skos:altLabel "عرض تقديمي"@ar,
+            "deck"@en .
+
+    mm:objective_1 a owl:NamedIndividual,
+            cco:ont00000476 ;
+        rdfs:label "Program A objective 1: operating model in place"@en ;
+        cco:ont00001942 mm:work_m01_v1_0,
+            mm:work_m06_v1_0 .
+
+    mm:objective_2 a owl:NamedIndividual,
+            cco:ont00000476 ;
+        rdfs:label "Program A objective 2: partners engaged"@en ;
+        cco:ont00001942 mm:work_m02_v1_0,
+            mm:work_m05_v1_0 .
+
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    mm:deck_3 a owl:NamedIndividual,
+            mm:MeetingPresentation ;
+        rdfs:label "status deck, meeting 3"@en ;
+        obo:BFO_0000178 mm:objective_1,
+            mm:objective_2 .
+
+    cco:ont00000476 skos:altLabel "هدف"@ar .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/D05> {
+    mm:deciding_m01_v1_0 obo:BFO_0000063 mm:deciding_m01_v1_1 .
+
+    mm:meeting_4 a owl:NamedIndividual,
+            cco:ont00000144 ;
+        rdfs:label "meeting 4"@en ;
+        obo:BFO_0000117 mm:deciding_m01_v1_1,
+            mm:deciding_m05_v1_1,
+            mm:deciding_m06_v1_1 ;
+        cco:ont00001833 mm:attendees_1 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D05> a owl:Ontology ;
+        dcterms:date "2026-02-24" ;
+        dcterms:description "Depth. Three mandates are re-issued as v1.1. The new triples attach to individuals from D01, D02 and D03 (the earlier acts of deciding, the objectives) instead of copying or overwriting them. This is the document that makes CQ1 answerable."@en ;
+        dcterms:title "D05: minutes of meeting 4"@en .
+
+    mm:id_m01_v1_1 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M01 v1.1" ;
+        cco:ont00001916 mm:m01_v1_1 .
+
+    mm:id_m05_v1_1 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M05 v1.1" ;
+        cco:ont00001916 mm:m05_v1_1 .
+
+    mm:id_m06_v1_1 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M06 v1.1" ;
+        cco:ont00001916 mm:m06_v1_1 .
+
+    mm:minutes_4 a owl:NamedIndividual,
+            mm:MeetingMinutes ;
+        rdfs:label "minutes of meeting 4"@en ;
+        obo:BFO_0000178 mm:id_m01_v1_1,
+            mm:id_m05_v1_1,
+            mm:id_m06_v1_1,
+            mm:m01_v1_1,
+            mm:m05_v1_1,
+            mm:m06_v1_1 .
+
+    mm:minutes_file_4 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "minutes file, meeting 4"@en ;
+        obo:BFO_0000101 mm:minutes_4 .
+
+    mm:deciding_m01_v1_1 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M01 v1.1"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_4 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m01_v1_1 .
+
+    mm:deciding_m05_v1_0 obo:BFO_0000063 mm:deciding_m05_v1_1 .
+
+    mm:deciding_m05_v1_1 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M05 v1.1"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_4 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m05_v1_1 .
+
+    mm:deciding_m06_v1_0 obo:BFO_0000063 mm:deciding_m06_v1_1 .
+
+    mm:deciding_m06_v1_1 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M06 v1.1"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_4 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m06_v1_1 .
+
+    mm:objective_1 cco:ont00001942 mm:work_m01_v1_1,
+            mm:work_m06_v1_1 .
+
+    mm:objective_2 cco:ont00001942 mm:work_m05_v1_1 .
+
+    mm:work_m01_v1_1 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "narrow programme scope"@en .
+
+    mm:work_m05_v1_1 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "assign roles and set KPIs"@en .
+
+    mm:work_m06_v1_1 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "close operating model gaps and resubmit"@en .
+
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    mm:documenting_4 a owl:NamedIndividual,
+            cco:ont00000438 ;
+        rdfs:label "documenting meeting 4"@en ;
+        cco:ont00001833 mm:secretary_1 ;
+        cco:ont00001986 mm:minutes_file_4 .
+
+    mm:m01_v1_1 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M01 v1.1 (scope, narrowed)"@en ;
+        cco:ont00001942 mm:work_m01_v1_1 .
+
+    mm:m05_v1_1 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M05 v1.1 (roles + KPIs)"@en ;
+        cco:ont00001942 mm:work_m05_v1_1 .
+
+    mm:m06_v1_1 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M06 v1.1 (operating model, gaps + resubmit)"@en ;
+        cco:ont00001942 mm:work_m06_v1_1 .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/D06> {
+    mm:letter_file_1 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "letter file 1"@en ;
+        obo:BFO_0000101 mm:letter_1 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D06> a owl:Ontology ;
+        dcterms:date "2026-03-05" ;
+        dcterms:description "Mostly language, plus one cross-document link. The letter cites mandate M06 v1.1 by its identifier, so it attaches to the same mandate as the minutes without pointing at them. Its words become new labels on classes that already exist."@en ;
+        dcterms:title "D06: follow-up letter on M06 v1.1"@en .
+
+    mm:OfficialLetter skos:altLabel "خطاب متابعة"@ar,
+            "follow-up letter"@en .
+
+    mm:letter_1 a owl:NamedIndividual,
+            mm:OfficialLetter ;
+        rdfs:label "follow-up letter on M06 v1.1"@en ;
+        obo:BFO_0000178 mm:id_m06_v1_1,
+            mm:m06_v1_1 .
+
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+
+    mm:MandateIdentifier skos:altLabel "رقم التكليف"@ar,
+            "mandate no."@en .
+
+    mm:Mandate skos:altLabel "directive"@en .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/D01> {
+    mm:meeting_1 a owl:NamedIndividual,
+            cco:ont00000144 ;
+        rdfs:label "meeting 1"@en ;
+        obo:BFO_0000117 mm:deciding_m01_v1_0,
+            mm:deciding_m02_v1_0 ;
+        cco:ont00001833 mm:attendees_1 .
+
+    <https://github.com/luay9/meeting-mandate/graph/D01> a owl:Ontology ;
+        dcterms:date "2025-07-10" ;
+        dcterms:description "The first document ingested. It founds the base: the chair, the authority role, the group, the first meeting and two mandates."@en ;
+        dcterms:title "D01: minutes of meeting 1"@en .
+
+    mm:deciding_m02_v1_0 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M02 v1.0"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_1 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m02_v1_0 .
+
+    mm:id_m01_v1_0 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M01 v1.0" ;
+        cco:ont00001916 mm:m01_v1_0 .
+
+    mm:id_m02_v1_0 a owl:NamedIndividual,
+            mm:MandateIdentifier ;
+        rdfs:label "M02 v1.0" ;
+        cco:ont00001916 mm:m02_v1_0 .
+
+    mm:minutes_1 a owl:NamedIndividual,
+            mm:MeetingMinutes ;
+        rdfs:label "minutes of meeting 1"@en ;
+        obo:BFO_0000178 mm:id_m01_v1_0,
+            mm:id_m02_v1_0,
+            mm:m01_v1_0,
+            mm:m02_v1_0 .
+
+    mm:minutes_file_1 a owl:NamedIndividual,
+            cco:ont00000253 ;
+        rdfs:label "minutes file, meeting 1"@en ;
+        obo:BFO_0000101 mm:minutes_1 .
+
+    mm:deciding_m01_v1_0 a owl:NamedIndividual,
+            cco:ont00000133 ;
+        rdfs:label "deciding M01 v1.0"@en ;
+        obo:BFO_0000055 mm:authority_role_1 ;
+        obo:BFO_0000063 mm:documenting_1 ;
+        cco:ont00001833 mm:chair_1 ;
+        cco:ont00001986 mm:m01_v1_0 .
+
+    mm:documenting_1 a owl:NamedIndividual,
+            cco:ont00000438 ;
+        rdfs:label "documenting meeting 1"@en ;
+        cco:ont00001833 mm:secretary_1 ;
+        cco:ont00001986 mm:minutes_file_1 .
+
+    mm:work_m01_v1_0 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "define programme scope"@en .
+
+    mm:work_m02_v1_0 a owl:NamedIndividual,
+            cco:ont00000228 ;
+        rdfs:label "draft incentive terms"@en .
+
+    mm:m01_v1_0 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M01 v1.0 (scope)"@en ;
+        cco:ont00001942 mm:work_m01_v1_0 .
+
+    mm:m02_v1_0 a owl:NamedIndividual,
+            mm:Mandate ;
+        rdfs:label "mandate M02 v1.0 (incentive terms)"@en ;
+        cco:ont00001942 mm:work_m02_v1_0 .
+
+    mm:attendees_1 a owl:NamedIndividual,
+            cco:ont00000914 ;
+        rdfs:label "Program A steering group"@en ;
+        obo:BFO_0000115 mm:chair_1,
+            mm:secretary_1 .
+
+    obo:BFO_0000055 a owl:ObjectProperty .
+
+    obo:BFO_0000057 a owl:ObjectProperty .
+
+    obo:BFO_0000063 a owl:ObjectProperty .
+
+    obo:BFO_0000101 a owl:ObjectProperty .
+
+    obo:BFO_0000115 a owl:ObjectProperty .
+
+    obo:BFO_0000117 a owl:ObjectProperty .
+
+    obo:BFO_0000132 a owl:ObjectProperty .
+
+    obo:BFO_0000178 a owl:ObjectProperty .
+
+    obo:BFO_0000196 a owl:ObjectProperty .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    cco:ont00001816 a owl:ObjectProperty .
+
+    cco:ont00001833 a owl:ObjectProperty .
+
+    cco:ont00001916 a owl:ObjectProperty .
+
+    cco:ont00001942 a owl:ObjectProperty .
+
+    cco:ont00001986 a owl:ObjectProperty .
+
+    mm:secretary_1 a owl:NamedIndividual,
+            cco:ont00001262 ;
+        rdfs:label "secretary 1"@en .
+
+    mm:authority_role_1 a owl:NamedIndividual,
+            cco:ont00000187 ;
+        rdfs:label "authority role of chair 1"@en .
+
+    mm:chair_1 a owl:NamedIndividual,
+            cco:ont00001262 ;
+        rdfs:label "chair 1"@en ;
+        obo:BFO_0000196 mm:authority_role_1 .
+}
+
+<https://github.com/luay9/meeting-mandate/graph/base> {
+    obo:BFO_0000054 a owl:ObjectProperty ;
+        rdfs:label "has realization"@en ;
+        dc:identifier "206-BFO" ;
+        rdfs:domain obo:BFO_0000017 ;
+        rdfs:range obo:BFO_0000015 ;
+        owl:inverseOf obo:BFO_0000055 ;
+        skos:altLabel "realized in"@en ;
+        skos:definition "b has realization c =Def c realizes b"@en ;
+        skos:example "As for realizes"@en .
+
+    obo:BFO_0000058 a owl:ObjectProperty ;
+        rdfs:label "is concretized by"@en ;
+        dc:identifier "258-BFO" ;
+        rdfs:domain obo:BFO_0000031 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb17 ;
+        owl:inverseOf obo:BFO_0000059 ;
+        skos:definition "c is concretized by b =Def b concretizes c"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000062 a owl:ObjectProperty,
+            owl:TransitiveProperty ;
+        rdfs:label "preceded by"@en ;
+        dc:identifier "213-BFO" ;
+        rdfs:domain obo:BFO_0000003 ;
+        rdfs:range obo:BFO_0000003 ;
+        owl:inverseOf obo:BFO_0000063 ;
+        skos:definition "b preceded by c =Def b precedes c"@en ;
+        skos:example "The temporal region occupied by the second half of the match is preceded by the temporal region occupied by the first half of the match"@en .
+
+    obo:BFO_0000084 a owl:ObjectProperty ;
+        rdfs:label "generically depends on"@en ;
+        dc:identifier "252-BFO" ;
+        rdfs:domain obo:BFO_0000031 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb23 ;
+        owl:inverseOf obo:BFO_0000101 ;
+        skos:altLabel "g-depends on"@en ;
+        skos:definition "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    dc:identifier a owl:AnnotationProperty .
+
+    skos:closeMatch a owl:AnnotationProperty .
+
+    skos:definition a owl:AnnotationProperty .
+
+    skos:exactMatch a owl:AnnotationProperty .
+
+    skos:example a owl:AnnotationProperty .
+
+    <https://github.com/luay9/meeting-mandate> a owl:Ontology ;
+        dcterms:creator "Luay Assidmi" ;
+        dcterms:description "Design pattern for executive meetings, the mandates they produce, and the documents that carry them. Built on BFO and CCO (extracted module: cco-module.ttl); aligned to IAO by SKOS mappings only."@en ;
+        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+        dcterms:title "Meeting & Mandate ontology"@en ;
+        owl:versionInfo "0.1" .
+
+    mm:DecisionMeeting a owl:Class ;
+        rdfs:label "decision meeting"@en ;
+        rdfs:comment "Defined class. Membership is inferred by the reasoner and is never asserted. A meeting where nothing is decided (a status briefing) remains an Act of Meeting without being classified here."@en ;
+        owl:equivalentClass _:n8664e8ae906b4bcc99f9d803895c91ecb1 ;
+        skos:definition "A meeting that has as part at least one act of directive communication, performed by a person who bears an authority role, whose output is a mandate."@en ;
+        skos:prefLabel "اجتماع قرار"@ar,
+            "decision meeting"@en .
+
+    cco:CommonCoreOntologiesMerged a owl:Ontology .
+
+    cco:ont00000390 a owl:Class ;
+        rdfs:label "Spatial Region Identifier"@en ;
+        rdfs:subClassOf cco:ont00000686 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb119 ;
+        skos:definition "A Designative Information Content Entity that designates some Spatial Region."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00000399 a owl:Class ;
+        rdfs:label "Temporal Region Identifier"@en ;
+        rdfs:subClassOf cco:ont00000686 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb123 ;
+        skos:definition "A Designative Information Content Entity that designates some Temporal Region."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00001754 a owl:AnnotationProperty .
+
+    cco:ont00001760 a owl:AnnotationProperty .
+
+    cco:ont00001787 a owl:ObjectProperty ;
+        rdfs:label "agent in"@en ;
+        rdfs:domain cco:ont00001017 ;
+        rdfs:range obo:BFO_0000015 ;
+        rdfs:subPropertyOf obo:BFO_0000056 ;
+        owl:inverseOf cco:ont00001833 ;
+        skos:definition "x agent_in y iff y is an instance of Process and x is an instance of Agent, such that x is causally active in y."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001879 a owl:ObjectProperty ;
+        rdfs:label "designated by"@en ;
+        rdfs:domain obo:BFO_0000001 ;
+        rdfs:range cco:ont00000686 ;
+        rdfs:subPropertyOf cco:ont00001801 ;
+        owl:inverseOf cco:ont00001916 ;
+        skos:definition "x designated by y =Def y designates x."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00001920 a owl:ObjectProperty ;
+        rdfs:label "prescribed by"@en ;
+        rdfs:domain obo:BFO_0000001 ;
+        rdfs:range cco:ont00000965 ;
+        rdfs:subPropertyOf cco:ont00001801 ;
+        owl:inverseOf cco:ont00001942 ;
+        skos:definition "x prescribed by y =Def y prescribes x."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00002076 a owl:Class ;
+        rdfs:label "Act of Communication Mediated by Artifact"@en ;
+        rdfs:subClassOf cco:ont00000402 ;
+        skos:definition "An Act of Communication in which technology is used to create a new copy of the Information Content Entity in the recipient."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    obo:BFO_0000016 a owl:Class ;
+        rdfs:label "disposition"@en ;
+        dc:identifier "062-BFO" ;
+        rdfs:subClassOf obo:BFO_0000017 ;
+        owl:disjointWith obo:BFO_0000023 ;
+        skos:altLabel "internally-grounded realizable entity"@en ;
+        skos:definition "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en ;
+        skos:example "An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways"@en .
+
+    obo:BFO_0000027 a owl:Class ;
+        rdfs:label "object aggregate"@en ;
+        dc:identifier "025-BFO" ;
+        rdfs:subClassOf obo:BFO_0000040 ;
+        skos:definition "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en ;
+        skos:example "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en ;
+        skos:scopeNote "'Exactly' means that there are no parts of the object aggregate other than its member parts.",
+            "The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts." .
+
+    obo:BFO_0000129 a owl:ObjectProperty ;
+        rdfs:label "member part of"@en ;
+        dc:identifier "228-BFO" ;
+        rdfs:domain obo:BFO_0000040 ;
+        rdfs:range obo:BFO_0000040 ;
+        rdfs:subPropertyOf obo:BFO_0000176 ;
+        skos:definition "b member part of c =Def b is an object & c is a material entity & there is some time t such that b continuant part of c at t & there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 <= i <= n)"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000194 a owl:ObjectProperty ;
+        rdfs:label "specifically depended on by"@en ;
+        dc:identifier "260-BFO" ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb31 ;
+        rdfs:range obo:BFO_0000020 ;
+        owl:inverseOf obo:BFO_0000195 ;
+        skos:altLabel "s-depended on by"@en ;
+        skos:definition "b specifically depended on by c =Def c specifically depends on b"@en ;
+        skos:example "Coloured object specifically depended on by colour"@en .
+
+    obo:BFO_0000197 a owl:ObjectProperty ;
+        rdfs:label "inheres in"@en ;
+        dc:identifier "051-BFO" ;
+        rdfs:domain obo:BFO_0000020 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb49 ;
+        rdfs:subPropertyOf obo:BFO_0000195 ;
+        skos:definition "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
+        skos:example "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+    cco:ont00000300 a owl:Class ;
+        rdfs:label "Group of Agents"@en ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb114,
+            obo:BFO_0000027 ;
+        skos:definition "An Object Aggregate that has only Agents as member parts."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00000433 a owl:Class ;
+        rdfs:label "Act of Association"@en ;
+        rdfs:subClassOf cco:ont00001327 ;
+        skos:definition "A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business."@en ;
+        cco:ont00001754 "http://en.wiktionary.org/wiki/associate" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00000551 a owl:Class ;
+        rdfs:label "Organism"@en ;
+        rdfs:subClassOf obo:BFO_0000030 ;
+        skos:definition "An Object that is an Animal or Plant."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00000562 a owl:Class ;
+        rdfs:label "Animal"@en ;
+        rdfs:subClassOf cco:ont00000551 ;
+        skos:definition "An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Animal&oldid=1063873549"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00000649 a owl:Class ;
+        rdfs:label "Non-Name Identifier"@en ;
+        rdfs:subClassOf cco:ont00000686 ;
+        skos:altLabel "ID"@en,
+            "Identifier"@en ;
+        skos:definition "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified namespace or context, is not a Designative Name, may be automatically or randomly generated, and typically has no preexisting cultural or social significance."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00000914 a owl:Class ;
+        rdfs:label "Group of Persons"@en ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb131,
+            _:n2d1cf575c2a3495bb3809883c2b8680fb132,
+            cco:ont00000300 ;
+        skos:definition "A Group of Agents that has only Persons as member parts."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001324 a owl:Class ;
+        rdfs:label "Process Regulation"@en ;
+        rdfs:subClassOf cco:ont00000965 ;
+        skos:definition "A Prescriptive Information Content Entity that prescribes an Process as required, prohibited, or permitted, and is the output of an Process which realizes some Authority Role."@en ;
+        skos:scopeNote "Although regulations often regulate processes which involve agents--as the regulating or regulated participant--it is unclear how causally active an agents need to be in those regulated processes. For example, it is not clear how causally active a human agent is in the process of a traffic light regulating the motion of a self-driving vehicle."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001327 a owl:Class ;
+        rdfs:label "Social Act"@en ;
+        rdfs:subClassOf cco:ont00000228 ;
+        skos:definition "A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons."@en ;
+        cco:ont00001754 "http://en.wiktionary.org/wiki/commually" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00001374 a owl:Class ;
+        rdfs:label "Act of Declarative Communication"@en ;
+        rdfs:subClassOf cco:ont00000402 ;
+        skos:definition "An Act of Communication that changes the reality in accord with the content of the declaration."@en ;
+        skos:scopeNote "Examples: Baptism, Sentencing a person to imprisonment, Pronouncing a couple husband and wife, Declaring war"@en ;
+        cco:ont00001754 "Derived (loosely) from: John Searle's Speech Acts: An Essay in the Philosophy of Language" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00001379 a owl:Class ;
+        rdfs:label "Agent Capability"@en ;
+        rdfs:subClassOf obo:BFO_0000017 ;
+        skos:definition "A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act."@en ;
+        cco:ont00001754 "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00002001 a owl:Class ;
+        rdfs:label "Media Content Entity"@en ;
+        rdfs:subClassOf cco:ont00000958 ;
+        skos:definition "An information content entity presented in a canonical media format."@en ;
+        skos:scopeNote "By 'canonical', it is intended that the media format is of a commonly recognized format, such as mass media formats such as books, magazines, and journals, as well as digital media forms (e.g. ebooks), to include, too, file types, such as those recognized by the Internet Assigned Numbers Authority (IANA)'s Media Types standard [RFC2046]." ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00002043 a owl:Class ;
+        rdfs:label "Report"@en ;
+        rdfs:subClassOf cco:ont00002039 ;
+        skos:definition "A Document Content entity that conveys an account of some event, situation, or the result of some observation or inquiry."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Report&oldid=1063765657"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000011 a owl:Class ;
+        rdfs:label "spatiotemporal region"@en ;
+        dc:identifier "095-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb73,
+            obo:BFO_0000003 ;
+        skos:definition "(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime"@en ;
+        skos:example "The spatiotemporal region occupied by the development of a cancer tumour; the spatiotemporal region occupied by an orbiting satellite"@en ;
+        skos:scopeNote "'Spacetime' here refers to the maximal instance of the universal spatiotemporal region."@en .
+
+    obo:BFO_0000056 a owl:ObjectProperty ;
+        rdfs:label "participates in"@en ;
+        dc:identifier "250-BFO" ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb1 ;
+        rdfs:range obo:BFO_0000015 ;
+        owl:inverseOf obo:BFO_0000057 ;
+        skos:definition "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000059 a owl:ObjectProperty ;
+        rdfs:label "concretizes"@en ;
+        dc:identifier "256-BFO" ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb20 ;
+        rdfs:range obo:BFO_0000031 ;
+        skos:definition "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000195 a owl:ObjectProperty ;
+        rdfs:label "specifically depends on"@en ;
+        dc:identifier "012-BFO" ;
+        rdfs:domain obo:BFO_0000020 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb38 ;
+        skos:altLabel "s-depends on"@en ;
+        skos:definition "(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common & b is of a nature such that at all times t it cannot exist unless c exists & b is not a boundary of c"@en ;
+        skos:example "A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other"@en ;
+        skos:scopeNote "The analogue of specifically depends on for occurrents is has participant."@en .
+
+    mm:MeetingPresentation a owl:Class ;
+        rdfs:label "meeting presentation"@en ;
+        rdfs:subClassOf cco:ont00002039 ;
+        skos:closeMatch obo:IAO_0000310 ;
+        skos:definition "A document content entity that is prepared to be shown to the participants of a meeting, setting out the topics they are to address."@en ;
+        skos:prefLabel "عرض اجتماع"@ar,
+            "meeting presentation"@en .
+
+    mm:OfficialLetter a owl:Class ;
+        rdfs:label "official letter"@en ;
+        rdfs:subClassOf cco:ont00002039 ;
+        skos:closeMatch obo:IAO_0000310 ;
+        skos:definition "A document content entity that is addressed by one agent to another in an official capacity, and may restate or cite a mandate by its identifier."@en ;
+        skos:prefLabel "خطاب رسمي"@ar,
+            "official letter"@en .
+
+    cco:ont00000005 a owl:Class ;
+        rdfs:label "Act"@en ;
+        rdfs:subClassOf obo:BFO_0000015 ;
+        skos:definition "A Process in which at least one Agent plays a causative role."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00000187 a owl:Class ;
+        rdfs:label "Authority Role"@en ;
+        rdfs:subClassOf obo:BFO_0000023 ;
+        skos:definition "A Role that is realized by Processes which create, modify, transfer, or eliminate Process Regulations or other Authority Roles, and inheres in an Agent in virtue of collective acceptance of that Agent's ability to issue binding directives."@en ;
+        skos:scopeNote "Authority Roles are externally grounded in a social group's collective acceptance of the binding force of the agent's directives. This acceptance can be direct or indirect (e.g., by accepting a procedure for deputizing authority). Such collective acceptance need not be explicit or cognized; rather, collective acceptance can be expressed in the dispositions and attitudes of people toward that agent's directives. In many cases, the directives issued by Authority Roles are backed by threats of punishment or sanction for failure to comply, but the issuing of a directive plus a threat is not sufficient for authority. Rather, an agent's authority must be accepted either directly or indirectly through the acceptance of a procedure for bestowing authority (e.g., elections)."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001801 a owl:ObjectProperty ;
+        rdfs:label "is subject of"@en ;
+        rdfs:domain obo:BFO_0000001 ;
+        rdfs:range cco:ont00000958 ;
+        owl:inverseOf cco:ont00001808 ;
+        skos:definition "x is subject of y =Def y is about x."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000008 a owl:Class ;
+        rdfs:label "temporal region"@en ;
+        dc:identifier "100-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb72,
+            obo:BFO_0000003 ;
+        skos:definition "(Elucidation) A temporal region is an occurrent over which processes can unfold"@en ;
+        skos:example "As for zero-dimensional temporal region and one-dimensional temporal region"@en .
+
+    obo:BFO_0000023 a owl:Class ;
+        rdfs:label "role"@en ;
+        dc:identifier "061-BFO" ;
+        rdfs:subClassOf obo:BFO_0000017 ;
+        skos:altLabel "externally-grounded realizable entity"@en ;
+        skos:definition "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
+        skos:example "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
+
+    obo:BFO_0000030 a owl:Class ;
+        rdfs:label "object"@en ;
+        dc:identifier "024-BFO" ;
+        rdfs:subClassOf obo:BFO_0000040 ;
+        skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+        skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
+        skos:scopeNote "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+
+    cco:ont00000476 a owl:Class ;
+        rdfs:label "Objective"@en ;
+        rdfs:subClassOf cco:ont00000965 ;
+        skos:definition "A Prescriptive Information Content Entity that prescribes some projected state that some Agent intends to achieve."@en ;
+        cco:ont00001754 "http://en.wikipedia.org/wiki/Objective_(goal)" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00002039 a owl:Class ;
+        rdfs:label "Document Content Entity"@en ;
+        rdfs:subClassOf cco:ont00002001 ;
+        skos:altLabel "Document"@en ;
+        skos:definition "A Media Content Entity that consists of a series of paragraphs of text or diagrams that are intended to be carried by physical pieces of paper or an electronic word processor file."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Document&oldid=1057829688"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000029 a owl:Class ;
+        rdfs:label "site"@en ;
+        dc:identifier "034-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb79,
+            _:n2d1cf575c2a3495bb3809883c2b8680fb83,
+            obo:BFO_0000141 ;
+        skos:definition "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en ;
+        skos:example "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en .
+
+    obo:BFO_0000035 a owl:Class ;
+        rdfs:label "process boundary"@en ;
+        dc:identifier "084-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb87,
+            _:n2d1cf575c2a3495bb3809883c2b8680fb88,
+            obo:BFO_0000003 ;
+        skos:definition "p is a process boundary =Def p is a temporal part of a process & p has no proper temporal parts"@en ;
+        skos:example "The boundary between the 2nd and 3rd year of your life"@en .
+
+    obo:BFO_0000140 a owl:Class ;
+        rdfs:label "continuant fiat boundary"@en ;
+        dc:identifier "029-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb98,
+            obo:BFO_0000141 ;
+        skos:definition "(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions & such that there is no time t when b has a spatial region as continuant part & whose location is determined in relation to some material entity"@en ;
+        skos:example "As for fiat point, fiat line, fiat surface"@en .
+
+    obo:BFO_0000141 a owl:Class ;
+        rdfs:label "immaterial entity"@en ;
+        dc:identifier "028-BFO" ;
+        rdfs:subClassOf obo:BFO_0000004 ;
+        skos:definition "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en ;
+        skos:example "As for fiat point, fiat line, fiat surface, site"@en .
+
+    cco:ont00000402 a owl:Class ;
+        rdfs:label "Act of Communication"@en ;
+        rdfs:subClassOf cco:ont00000228 ;
+        skos:definition "A Planned Act in which the objective is to create a concretization of some Information Content Entity in one or more recipients."@en ;
+        skos:scopeNote "Act of Communication is not intended to be a success term - a term that only applies when the act it denotes is successful. While successful communication is the goal, it is important that instances of this class can include both better and worse communication acts as well attempted communications that fail altogether."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Communication&oldid=1063752020"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00000438 a owl:Class ;
+        rdfs:label "Act of Official Documentation"@en ;
+        rdfs:subClassOf cco:ont00001374 ;
+        skos:definition "An Act of Declarative Communication in which an Agent records some information for official use by another Agent."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00001017 a owl:Class ;
+        rdfs:label "Agent"@en ;
+        rdfs:subClassOf obo:BFO_0000040 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb141 ;
+        skos:definition "A Material Entity that bears an Agent Capability."@en ;
+        cco:ont00001754 "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001808 a owl:ObjectProperty ;
+        rdfs:label "is about"@en ;
+        rdfs:domain cco:ont00000958 ;
+        rdfs:range obo:BFO_0000001 ;
+        skos:definition "x is_about y is a primitive relationship between an instance of Information Content Entity x and an instance of Entity y."@en ;
+        cco:ont00001754 "http://purl.obolibrary.org/obo/IAO_0000136" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000017 a owl:Class ;
+        rdfs:label "realizable entity"@en ;
+        dc:identifier "058-BFO" ;
+        rdfs:subClassOf obo:BFO_0000020 ;
+        skos:definition "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en ;
+        skos:example "The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity"@en .
+
+    mm:MeetingMinutes a owl:Class ;
+        rdfs:label "meeting minutes"@en ;
+        rdfs:subClassOf cco:ont00002043 ;
+        skos:definition "A report that conveys an account of a meeting, including any mandates issued in it, and is recorded for official use by those who must act on it."@en ;
+        skos:exactMatch obo:IAO_0000088 ;
+        skos:prefLabel "محضر اجتماع"@ar,
+            "meeting minutes"@en .
+
+    cco:ont00001262 a owl:Class ;
+        rdfs:label "Person"@en ;
+        rdfs:subClassOf cco:ont00000562 ;
+        skos:altLabel "Human"@en ;
+        skos:definition "An Animal that is a member of the species Homo sapiens."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    obo:BFO_0000176 a owl:ObjectProperty ;
+        rdfs:label "continuant part of"@en ;
+        dc:identifier "221-BFO" ;
+        rdfs:domain obo:BFO_0000002 ;
+        rdfs:range obo:BFO_0000002 ;
+        owl:inverseOf obo:BFO_0000178 ;
+        skos:definition "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+        skos:example "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    skos:altLabel a owl:AnnotationProperty .
+
+    skos:prefLabel a owl:AnnotationProperty .
+
+    skos:scopeNote a owl:AnnotationProperty .
+
+    cco:ont00000144 a owl:Class ;
+        rdfs:label "Act of Meeting"@en ;
+        rdfs:subClassOf cco:ont00000433 ;
+        skos:definition "An Act of Association wherein two or more Persons assemble for some common purpose."@en ;
+        cco:ont00001754 "http://wordnetweb.princeton.edu/perl/webwn?s=meet (Sense Key: meet%2:41:00, get together%2:41:00)" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00000253 a owl:Class ;
+        rdfs:label "Information Bearing Entity"@en ;
+        rdfs:subClassOf obo:BFO_0000030 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb110 ;
+        skos:altLabel "IBE"@en,
+            "Information Carrying Entity"@en ;
+        skos:definition "An Object upon which an Information Content Entity generically depends."@en ;
+        skos:scopeNote "This class continues to use the word ‘bearing’ in its rdfslabel because of potential confusion with the acronym ‘ICE’, which is widely used for information content entity."@en ;
+        cco:ont00001754 "http://purl.obolibrary.org/obo/IAO_0000178"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00000965 a owl:Class ;
+        rdfs:label "Prescriptive Information Content Entity"@en ;
+        rdfs:subClassOf cco:ont00000958 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb137 ;
+        skos:altLabel "Directive ICE"@en ;
+        skos:definition "An Information Content Entity that prescribes some Entity."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000063 a owl:ObjectProperty,
+            owl:TransitiveProperty ;
+        rdfs:label "precedes"@en ;
+        dc:identifier "270-BFO" ;
+        rdfs:domain obo:BFO_0000003 ;
+        rdfs:range obo:BFO_0000003 ;
+        skos:definition "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en ;
+        skos:example "The temporal region occupied by Mary's birth precedes the temporal region occupied by Mary's death."@en ;
+        skos:scopeNote "Each temporal region is its own temporal extent. The temporal extent of a spatiotemporal region is the temporal region it temporally projects onto. The temporal extent of a process or process boundary that occupies temporal region t is t.",
+            "Precedes defines a strict partial order on occurrents." .
+
+    cco:ont00000686 a owl:Class ;
+        rdfs:label "Designative Information Content Entity"@en ;
+        rdfs:subClassOf cco:ont00000958 ;
+        owl:disjointWith cco:ont00000965 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb127 ;
+        skos:altLabel "Designative ICE"@en ;
+        skos:definition "An Information Content Entity that consists of a set of symbols that designate some Entity."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00001816 a owl:ObjectProperty ;
+        rdfs:label "is output of"@en ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb53 ;
+        rdfs:range obo:BFO_0000015 ;
+        rdfs:subPropertyOf obo:BFO_0000056 ;
+        owl:inverseOf cco:ont00001986 ;
+        skos:definition "x is output of y =Def x participates in y, x is an Independent Continuant (but not a Spatial Region), y is a Process, and the presence of x at the end of y is a necessary condition for the completion of y."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+    obo:BFO_0000002 a owl:Class ;
+        rdfs:label "continuant"@en ;
+        dc:identifier "008-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb69,
+            obo:BFO_0000001 ;
+        owl:disjointWith obo:BFO_0000003 ;
+        skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+        skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
+
+    obo:BFO_0000055 a owl:ObjectProperty ;
+        rdfs:label "realizes"@en ;
+        dc:identifier "059-BFO" ;
+        rdfs:domain obo:BFO_0000015 ;
+        rdfs:range obo:BFO_0000017 ;
+        skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+        skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+    obo:BFO_0000101 a owl:ObjectProperty ;
+        rdfs:label "is carrier of"@en ;
+        dc:identifier "254-BFO" ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb27 ;
+        rdfs:range obo:BFO_0000031 ;
+        skos:definition "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000115 a owl:ObjectProperty ;
+        rdfs:label "has member part"@en ;
+        dc:identifier "230-BFO" ;
+        rdfs:domain obo:BFO_0000040 ;
+        rdfs:range obo:BFO_0000040 ;
+        rdfs:subPropertyOf obo:BFO_0000178 ;
+        owl:inverseOf obo:BFO_0000129 ;
+        skos:definition "b has member part c =Def c member part of b"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000196 a owl:ObjectProperty ;
+        rdfs:label "bearer of"@en ;
+        dc:identifier "053-BFO" ;
+        rdfs:domain _:n2d1cf575c2a3495bb3809883c2b8680fb45 ;
+        rdfs:range obo:BFO_0000020 ;
+        rdfs:subPropertyOf obo:BFO_0000194 ;
+        owl:inverseOf obo:BFO_0000197 ;
+        skos:definition "b bearer of c =Def c inheres in b"@en ;
+        skos:example "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+    mm:MandateIdentifier a owl:Class ;
+        rdfs:label "mandate identifier"@en ;
+        rdfs:comment "Works like a tracking number (Smith, Document Acts, p. 10): the same identifier in the minutes, a follow-up letter and a tracker links all three to one mandate."@en ;
+        rdfs:subClassOf _:n8664e8ae906b4bcc99f9d803895c91ecb20,
+            cco:ont00000649 ;
+        skos:closeMatch obo:IAO_0020000 ;
+        skos:definition "A non-name identifier that designates a mandate, consisting of a mandate number and a version, such as 'M06 v1.1'."@en ;
+        skos:prefLabel "معرّف التوجيه"@ar,
+            "mandate identifier"@en .
+
+    cco:ont00000958 a owl:Class ;
+        rdfs:label "Information Content Entity"@en ;
+        rdfs:subClassOf obo:BFO_0000031 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb133 ;
+        skos:altLabel "ICE"@en ;
+        skos:definition "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+        skos:scopeNote "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+        cco:ont00001754 "http://purl.obolibrary.org/obo/IAO_0000030" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00001833 a owl:ObjectProperty ;
+        rdfs:label "has agent"@en ;
+        rdfs:domain obo:BFO_0000015 ;
+        rdfs:range cco:ont00001017 ;
+        rdfs:subPropertyOf obo:BFO_0000057 ;
+        skos:definition "x has agent y =Def y agent in x."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+    cco:ont00001942 a owl:ObjectProperty ;
+        rdfs:label "prescribes"@en ;
+        rdfs:domain cco:ont00000965 ;
+        rdfs:range obo:BFO_0000001 ;
+        rdfs:subPropertyOf cco:ont00001808 ;
+        skos:definition "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+        skos:example "A blueprint prescribes some artifact or facility by being a model for it.",
+            "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations.",
+            "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation." ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    cco:ont00001986 a owl:ObjectProperty ;
+        rdfs:label "has output"@en ;
+        rdfs:domain obo:BFO_0000015 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb61 ;
+        rdfs:subPropertyOf obo:BFO_0000057 ;
+        skos:definition "x has output y =Def y is output of x."@en ;
+        cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=IPO_model&oldid=1024398398"^^xsd:anyURI ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+    obo:BFO_0000057 a owl:ObjectProperty ;
+        rdfs:label "has participant"@en ;
+        dc:identifier "248-BFO" ;
+        rdfs:domain obo:BFO_0000015 ;
+        rdfs:range _:n2d1cf575c2a3495bb3809883c2b8680fb9 ;
+        skos:definition "p has participant c =Def c participates in p"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000117 a owl:ObjectProperty,
+            owl:TransitiveProperty ;
+        rdfs:label "has occurrent part"@en ;
+        dc:identifier "202-BFO" ;
+        rdfs:domain obo:BFO_0000003 ;
+        rdfs:range obo:BFO_0000003 ;
+        owl:inverseOf obo:BFO_0000132 ;
+        skos:definition "b has occurrent part c =Def c occurrent part of b"@en ;
+        skos:example "Mary's life has occurrent part Mary's 5th birthday"@en .
+
+    cco:ont00000133 a owl:Class ;
+        rdfs:label "Act of Directive Communication"@en ;
+        rdfs:subClassOf cco:ont00000402 ;
+        skos:definition "An Act of Communication that is intended to cause the hearer to take a particular action."@en ;
+        skos:scopeNote "Examples: advising, admonishing, asking, begging, dismissing, excusing, forbidding, instructing, ordering, permitting, requesting, requiring, suggesting, urging, warning"@en ;
+        cco:ont00001754 "Derived (loosely) from: John Searle's Speech Acts: An Essay in the Philosophy of Language" ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    cco:ont00000228 a owl:Class ;
+        rdfs:label "Planned Act"@en ;
+        rdfs:subClassOf cco:ont00000005 ;
+        owl:equivalentClass _:n2d1cf575c2a3495bb3809883c2b8680fb99 ;
+        skos:altLabel "Intentional Act"@en ;
+        skos:definition "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+    obo:BFO_0000001 a owl:Class ;
+        rdfs:label "entity"@en ;
+        dc:identifier "001-BFO" ;
+        skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+        skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+
+    obo:BFO_0000031 a owl:Class ;
+        rdfs:label "generically dependent continuant"@en ;
+        dc:identifier "074-BFO" ;
+        rdfs:subClassOf obo:BFO_0000002 ;
+        skos:altLabel "g-dependent continuant"@en ;
+        skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
+        skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+    obo:BFO_0000040 a owl:Class ;
+        rdfs:label "material entity"@en ;
+        dc:identifier "019-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb92,
+            _:n2d1cf575c2a3495bb3809883c2b8680fb93,
+            obo:BFO_0000004 ;
+        owl:disjointWith obo:BFO_0000141 ;
+        skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
+        skos:example "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
+
+    mm:Mandate a owl:Class ;
+        rdfs:label "mandate"@en ;
+        rdfs:comment "Each version of a mandate (M06 v1.0, M06 v1.1) is a distinct mandate. Recurrence is modelled by the earlier act of deciding preceding the later one, not by a version attribute."@en ;
+        rdfs:subClassOf _:n8664e8ae906b4bcc99f9d803895c91ecb15,
+            cco:ont00001324 ;
+        skos:closeMatch obo:IAO_0000033 ;
+        skos:definition "A process regulation that is the output of an act of directive communication performed in a meeting."@en ;
+        skos:prefLabel "توجيه"@ar,
+            "mandate"@en .
+
+    cco:ont00001916 a owl:ObjectProperty ;
+        rdfs:label "designates"@en ;
+        rdfs:domain cco:ont00000686 ;
+        rdfs:range obo:BFO_0000001 ;
+        rdfs:subPropertyOf cco:ont00001808 ;
+        skos:definition "x designates y iff x is an instance of a Designative Information Content Entity, and y is an instance of an Entity, such that given some context, x uniquely distinguishes y from other entities."@en ;
+        skos:example "a URL designates the location of a Web Page on the internet",
+            "a person's name designates that person",
+            "a vehicle identification number designates some vehicle" ;
+        skos:scopeNote "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
+        cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+    obo:BFO_0000132 a owl:ObjectProperty,
+            owl:TransitiveProperty ;
+        rdfs:label "occurrent part of"@en ;
+        dc:identifier "003-BFO" ;
+        rdfs:domain obo:BFO_0000003 ;
+        rdfs:range obo:BFO_0000003 ;
+        skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+        skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+    obo:BFO_0000003 a owl:Class ;
+        rdfs:label "occurrent"@en ;
+        dc:identifier "077-BFO" ;
+        rdfs:subClassOf obo:BFO_0000001 ;
+        skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
+        skos:example "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
+
+    obo:BFO_0000006 a owl:Class ;
+        rdfs:label "spatial region"@en ;
+        dc:identifier "035-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb71,
+            obo:BFO_0000141 ;
+        skos:definition "(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time"@en ;
+        skos:example "As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region"@en .
+
+    obo:BFO_0000178 a owl:ObjectProperty ;
+        rdfs:label "has continuant part"@en ;
+        dc:identifier "271-BFO" ;
+        rdfs:domain obo:BFO_0000002 ;
+        rdfs:range obo:BFO_0000002 ;
+        skos:definition "b has continuant part c =Def c continuant part of b"@en ;
+        skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+    obo:BFO_0000004 a owl:Class ;
+        rdfs:label "independent continuant"@en ;
+        dc:identifier "017-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb70,
+            obo:BFO_0000002 ;
+        skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
+        skos:example "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
+
+    obo:BFO_0000020 a owl:Class ;
+        rdfs:label "specifically dependent continuant"@en ;
+        dc:identifier "050-BFO" ;
+        rdfs:subClassOf obo:BFO_0000002 ;
+        skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en ;
+        skos:example "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en,
+            "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
+
+    obo:BFO_0000015 a owl:Class ;
+        rdfs:label "process"@en ;
+        dc:identifier "083-BFO" ;
+        rdfs:subClassOf _:n2d1cf575c2a3495bb3809883c2b8680fb74,
+            _:n2d1cf575c2a3495bb3809883c2b8680fb78,
+            obo:BFO_0000003 ;
+        skos:altLabel "event"@en ;
+        skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+        skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb145 a owl:AllDisjointClasses ;
+        owl:members _:n2d1cf575c2a3495bb3809883c2b8680fb146 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb149 a owl:AllDisjointClasses ;
+        owl:members _:n2d1cf575c2a3495bb3809883c2b8680fb150 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb153 a owl:AllDisjointClasses ;
+        owl:members _:n2d1cf575c2a3495bb3809883c2b8680fb154 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb1 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb6 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb10 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb12 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb100 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000055 ;
+        owl:someValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb101 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb101 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb106 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb102 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb103 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb103 rdf:first obo:BFO_0000016 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb104 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb104 rdf:first obo:BFO_0000023 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb105 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000059 ;
+        owl:someValuesFrom cco:ont00000965 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb106 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb102 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb107 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb107 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb105 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb108 rdf:first cco:ont00000005 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb109 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb109 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb100 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb11 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb110 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb112 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb111 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000101 ;
+        owl:someValuesFrom cco:ont00000958 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb112 rdf:first obo:BFO_0000030 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb113 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb113 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb111 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb114 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb117 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb115 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000115 ;
+        owl:someValuesFrom cco:ont00001017 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb116 a owl:Restriction ;
+        owl:allValuesFrom cco:ont00001017 ;
+        owl:onProperty obo:BFO_0000115 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb117 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb115 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb118 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb118 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb116 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb119 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb121 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb12 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb13 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb120 a owl:Restriction ;
+        owl:onProperty cco:ont00001916 ;
+        owl:someValuesFrom obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb121 rdf:first cco:ont00000686 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb122 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb122 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb120 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb123 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb125 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb124 a owl:Restriction ;
+        owl:onProperty cco:ont00001916 ;
+        owl:someValuesFrom obo:BFO_0000008 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb125 rdf:first cco:ont00000686 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb126 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb126 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb124 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb127 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb129 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb128 a owl:Restriction ;
+        owl:onProperty cco:ont00001916 ;
+        owl:someValuesFrom obo:BFO_0000001 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb129 rdf:first cco:ont00000958 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb130 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb13 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb11 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb130 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb128 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb131 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000178 ;
+        owl:someValuesFrom cco:ont00001262 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb132 a owl:Restriction ;
+        owl:allValuesFrom cco:ont00001262 ;
+        owl:onProperty obo:BFO_0000178 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb133 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb135 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb134 a owl:Restriction ;
+        owl:onProperty cco:ont00001808 ;
+        owl:someValuesFrom obo:BFO_0000001 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb135 rdf:first obo:BFO_0000031 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb136 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb136 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb134 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb137 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb139 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb138 a owl:Restriction ;
+        owl:onProperty cco:ont00001942 ;
+        owl:someValuesFrom obo:BFO_0000001 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb139 rdf:first cco:ont00000958 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb140 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb14 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb15 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb140 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb138 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb141 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb143 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb142 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000196 ;
+        owl:someValuesFrom cco:ont00001379 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb143 rdf:first obo:BFO_0000040 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb144 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb144 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb142 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb146 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb147 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb147 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb148 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb148 rdf:first obo:BFO_0000031 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb15 rdf:first obo:BFO_0000031 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb16 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb150 rdf:first obo:BFO_0000006 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb151 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb151 rdf:first obo:BFO_0000029 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb152 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb152 rdf:first obo:BFO_0000140 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb154 rdf:first obo:BFO_0000008 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb155 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb155 rdf:first obo:BFO_0000011 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb156 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb156 rdf:first obo:BFO_0000015 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb157 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb157 rdf:first obo:BFO_0000035 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb16 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb10 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb17 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb18 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb18 rdf:first obo:BFO_0000015 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb19 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb19 rdf:first obo:BFO_0000020 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb2 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb4 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb20 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb21 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb21 rdf:first obo:BFO_0000015 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb22 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb22 rdf:first obo:BFO_0000020 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb23 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb25 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb24 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb25 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb26 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb26 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb24 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb27 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb29 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb28 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb29 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb30 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb3 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb30 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb28 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb31 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb36 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb32 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb34 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb33 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb34 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb35 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb35 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb33 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb36 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb37 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb37 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb32 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb38 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb43 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb39 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb41 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb4 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb5 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb40 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb41 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb42 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb42 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb40 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb43 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb44 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb44 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb39 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb45 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb47 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb46 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb47 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb48 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb48 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb46 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb49 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb51 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb5 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb3 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb50 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb51 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb52 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb52 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb50 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb53 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb58 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb54 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb56 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb55 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb56 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb57 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb57 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb55 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb58 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb59 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb59 rdf:first obo:BFO_0000031 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb60 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb6 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb7 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb60 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb54 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb61 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb66 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb62 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb64 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb63 a owl:Class ;
+        owl:complementOf obo:BFO_0000006 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb64 rdf:first obo:BFO_0000004 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb65 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb65 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb63 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb66 rdf:first obo:BFO_0000020 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb67 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb67 rdf:first obo:BFO_0000031 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb68 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb68 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb62 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb69 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000002 ;
+        owl:onProperty obo:BFO_0000176 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb7 rdf:first obo:BFO_0000031 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb8 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb70 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000004 ;
+        owl:onProperty obo:BFO_0000176 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb71 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000006 ;
+        owl:onProperty obo:BFO_0000176 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb72 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000008 ;
+        owl:onProperty obo:BFO_0000132 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb73 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000011 ;
+        owl:onProperty obo:BFO_0000132 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb74 a owl:Restriction ;
+        owl:allValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb75 ;
+        owl:onProperty obo:BFO_0000117 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb75 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb76 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb76 rdf:first obo:BFO_0000015 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb77 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb77 rdf:first obo:BFO_0000035 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb78 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000015 ;
+        owl:onProperty obo:BFO_0000132 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb79 a owl:Restriction ;
+        owl:allValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb80 ;
+        owl:onProperty obo:BFO_0000176 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb8 rdf:first _:n2d1cf575c2a3495bb3809883c2b8680fb2 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb80 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb81 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb81 rdf:first obo:BFO_0000029 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb82 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb82 rdf:first obo:BFO_0000040 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb83 a owl:Restriction ;
+        owl:allValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb84 ;
+        owl:onProperty obo:BFO_0000178 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb84 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb85 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb85 rdf:first obo:BFO_0000029 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb86 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb86 rdf:first obo:BFO_0000140 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb87 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000035 ;
+        owl:onProperty obo:BFO_0000117 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb88 a owl:Restriction ;
+        owl:allValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb89 ;
+        owl:onProperty obo:BFO_0000132 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb89 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb90 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb9 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb14 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb90 rdf:first obo:BFO_0000015 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb91 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb91 rdf:first obo:BFO_0000035 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb92 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000040 ;
+        owl:onProperty obo:BFO_0000176 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb93 a owl:Restriction ;
+        owl:allValuesFrom _:n2d1cf575c2a3495bb3809883c2b8680fb94 ;
+        owl:onProperty obo:BFO_0000178 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb94 a owl:Class ;
+        owl:unionOf _:n2d1cf575c2a3495bb3809883c2b8680fb95 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb95 rdf:first obo:BFO_0000029 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb96 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb96 rdf:first obo:BFO_0000040 ;
+        rdf:rest _:n2d1cf575c2a3495bb3809883c2b8680fb97 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb97 rdf:first obo:BFO_0000140 ;
+        rdf:rest () .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb98 a owl:Restriction ;
+        owl:allValuesFrom obo:BFO_0000140 ;
+        owl:onProperty obo:BFO_0000178 .
+
+    _:n2d1cf575c2a3495bb3809883c2b8680fb99 a owl:Class ;
+        owl:intersectionOf _:n2d1cf575c2a3495bb3809883c2b8680fb108 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb1 a owl:Class ;
+        owl:intersectionOf _:n8664e8ae906b4bcc99f9d803895c91ecb13 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb10 rdf:first cco:ont00000133 ;
+        rdf:rest _:n8664e8ae906b4bcc99f9d803895c91ecb11 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb11 rdf:first _:n8664e8ae906b4bcc99f9d803895c91ecb4 ;
+        rdf:rest _:n8664e8ae906b4bcc99f9d803895c91ecb12 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb12 rdf:first _:n8664e8ae906b4bcc99f9d803895c91ecb9 ;
+        rdf:rest () .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb13 rdf:first cco:ont00000144 ;
+        rdf:rest _:n8664e8ae906b4bcc99f9d803895c91ecb14 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb14 rdf:first _:n8664e8ae906b4bcc99f9d803895c91ecb2 ;
+        rdf:rest () .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb15 a owl:Restriction ;
+        owl:onProperty cco:ont00001816 ;
+        owl:someValuesFrom _:n8664e8ae906b4bcc99f9d803895c91ecb16 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb16 a owl:Class ;
+        owl:intersectionOf _:n8664e8ae906b4bcc99f9d803895c91ecb18 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb17 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000132 ;
+        owl:someValuesFrom cco:ont00000144 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb18 rdf:first cco:ont00000133 ;
+        rdf:rest _:n8664e8ae906b4bcc99f9d803895c91ecb19 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb19 rdf:first _:n8664e8ae906b4bcc99f9d803895c91ecb17 ;
+        rdf:rest () .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb2 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000117 ;
+        owl:someValuesFrom _:n8664e8ae906b4bcc99f9d803895c91ecb3 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb20 a owl:Restriction ;
+        owl:onProperty cco:ont00001916 ;
+        owl:someValuesFrom mm:Mandate .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb3 a owl:Class ;
+        owl:intersectionOf _:n8664e8ae906b4bcc99f9d803895c91ecb10 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb4 a owl:Restriction ;
+        owl:onProperty cco:ont00001833 ;
+        owl:someValuesFrom _:n8664e8ae906b4bcc99f9d803895c91ecb5 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb5 a owl:Class ;
+        owl:intersectionOf _:n8664e8ae906b4bcc99f9d803895c91ecb7 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb6 a owl:Restriction ;
+        owl:onProperty obo:BFO_0000196 ;
+        owl:someValuesFrom cco:ont00000187 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb7 rdf:first cco:ont00001262 ;
+        rdf:rest _:n8664e8ae906b4bcc99f9d803895c91ecb8 .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb8 rdf:first _:n8664e8ae906b4bcc99f9d803895c91ecb6 ;
+        rdf:rest () .
+
+    _:n8664e8ae906b4bcc99f9d803895c91ecb9 a owl:Restriction ;
+        owl:onProperty cco:ont00001986 ;
+        owl:someValuesFrom mm:Mandate .
+}
+

@@ -1,0 +1,36 @@
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Felicity-condition probe: a directive issued by a person who bears no
+# authority role. Its meeting must NOT be inferred to be a decision meeting.
+# (Open world: the reasoner has no evidence of authority, so it does not
+# classify. It does not conclude the meeting is a non-decision meeting.)
+<https://github.com/luay9/meeting-mandate/tests/no-authority-probe> a owl:Ontology .
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+
+:visitor_1 a owl:NamedIndividual , cco:ont00001262 ; rdfs:label "visitor 1"@en .
+:meeting_x a owl:NamedIndividual , cco:ont00000144 ; rdfs:label "meeting x (no authority)"@en ;
+    obo:BFO_0000117 :deciding_x .
+:deciding_x a owl:NamedIndividual , cco:ont00000133 ; rdfs:label "deciding x"@en ;
+    cco:ont00001833 :visitor_1 ;
+    cco:ont00001986 :m_x .
+:m_x a owl:NamedIndividual , :Mandate ; rdfs:label "mandate x"@en .

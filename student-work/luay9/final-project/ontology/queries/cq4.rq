@@ -1,0 +1,16 @@
+# CQ4. Which meetings are decision meetings?
+# Nothing is asserted to be a DecisionMeeting. Run against the REASONED file
+# (meeting-mandate-full.ttl): on the asserted data this returns no rows.
+PREFIX :     <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:  <https://www.commoncoreontologies.org/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?meeting (COUNT(DISTINCT ?m) AS ?mandatesIssued) WHERE {
+  ?x a :DecisionMeeting ; rdfs:label ?meeting .
+  ?x obo:BFO_0000117 ?act .                      # has occurrent part
+  ?act cco:ont00001986 ?m .                      # has output
+  ?m a :Mandate .
+}
+GROUP BY ?meeting
+ORDER BY ?meeting

@@ -1,0 +1,30 @@
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Step 8 probe: a mandate that is also a person. Mandate is a generically
+# dependent continuant; Person is an independent continuant; BFO declares
+# the two disjoint. HermiT must report the merged ontology inconsistent.
+<https://github.com/luay9/meeting-mandate/tests/bad-mandate-person> a owl:Ontology .
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+
+:bad_1 a owl:NamedIndividual , :Mandate , cco:ont00001262 ;   # Mandate and Person
+    rdfs:label "bad individual: mandate and person"@en .

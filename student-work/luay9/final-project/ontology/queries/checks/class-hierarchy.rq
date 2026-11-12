@@ -1,0 +1,5 @@
+# Step 7 check: the named parent of each class in this ontology after reasoning.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?class ?super ?superLabel WHERE {
+  VALUES ?class { <https://github.com/luay9/meeting-mandate#DecisionMeeting> <https://github.com/luay9/meeting-mandate#Mandate> <https://github.com/luay9/meeting-mandate#MeetingMinutes> <https://github.com/luay9/meeting-mandate#OfficialLetter> <https://github.com/luay9/meeting-mandate#MeetingPresentation> <https://github.com/luay9/meeting-mandate#MandateIdentifier> }
+  ?class rdfs:subClassOf ?super . FILTER(isIRI(?super)) ?super rdfs:label ?superLabel } ORDER BY ?class ?superLabel

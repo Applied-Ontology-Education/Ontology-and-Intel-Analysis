@@ -1,0 +1,50 @@
+mandate,type
+mandate M01 v1.0 (scope),Information Content Entity
+mandate M01 v1.0 (scope),Prescriptive Information Content Entity
+mandate M01 v1.0 (scope),Process Regulation
+mandate M01 v1.0 (scope),continuant
+mandate M01 v1.0 (scope),entity
+mandate M01 v1.0 (scope),generically dependent continuant
+mandate M01 v1.0 (scope),mandate
+"mandate M01 v1.1 (scope, narrowed)",Information Content Entity
+"mandate M01 v1.1 (scope, narrowed)",Prescriptive Information Content Entity
+"mandate M01 v1.1 (scope, narrowed)",Process Regulation
+"mandate M01 v1.1 (scope, narrowed)",continuant
+"mandate M01 v1.1 (scope, narrowed)",entity
+"mandate M01 v1.1 (scope, narrowed)",generically dependent continuant
+"mandate M01 v1.1 (scope, narrowed)",mandate
+mandate M02 v1.0 (incentive terms),Information Content Entity
+mandate M02 v1.0 (incentive terms),Prescriptive Information Content Entity
+mandate M02 v1.0 (incentive terms),Process Regulation
+mandate M02 v1.0 (incentive terms),continuant
+mandate M02 v1.0 (incentive terms),entity
+mandate M02 v1.0 (incentive terms),generically dependent continuant
+mandate M02 v1.0 (incentive terms),mandate
+mandate M05 v1.0 (roles),Information Content Entity
+mandate M05 v1.0 (roles),Prescriptive Information Content Entity
+mandate M05 v1.0 (roles),Process Regulation
+mandate M05 v1.0 (roles),continuant
+mandate M05 v1.0 (roles),entity
+mandate M05 v1.0 (roles),generically dependent continuant
+mandate M05 v1.0 (roles),mandate
+mandate M05 v1.1 (roles + KPIs),Information Content Entity
+mandate M05 v1.1 (roles + KPIs),Prescriptive Information Content Entity
+mandate M05 v1.1 (roles + KPIs),Process Regulation
+mandate M05 v1.1 (roles + KPIs),continuant
+mandate M05 v1.1 (roles + KPIs),entity
+mandate M05 v1.1 (roles + KPIs),generically dependent continuant
+mandate M05 v1.1 (roles + KPIs),mandate
+mandate M06 v1.0 (operating model),Information Content Entity
+mandate M06 v1.0 (operating model),Prescriptive Information Content Entity
+mandate M06 v1.0 (operating model),Process Regulation
+mandate M06 v1.0 (operating model),continuant
+mandate M06 v1.0 (operating model),entity
+mandate M06 v1.0 (operating model),generically dependent continuant
+mandate M06 v1.0 (operating model),mandate
+"mandate M06 v1.1 (operating model, gaps + resubmit)",Information Content Entity
+"mandate M06 v1.1 (operating model, gaps + resubmit)",Prescriptive Information Content Entity
+"mandate M06 v1.1 (operating model, gaps + resubmit)",Process Regulation
+"mandate M06 v1.1 (operating model, gaps + resubmit)",continuant
+"mandate M06 v1.1 (operating model, gaps + resubmit)",entity
+"mandate M06 v1.1 (operating model, gaps + resubmit)",generically dependent continuant
+"mandate M06 v1.1 (operating model, gaps + resubmit)",mandate

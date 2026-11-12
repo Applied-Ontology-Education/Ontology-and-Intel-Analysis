@@ -1,0 +1,17 @@
+subject	relation	object	subject_type	object_type
+meeting_1	has agent	attendees_1	Act of Meeting	Group of Persons
+attendees_1	has member part	chair_1	Group of Persons	Person
+attendees_1	has member part	secretary_1	Group of Persons	Person
+chair_1	bearer of	authority_role_1	Person	Authority Role
+meeting_1	has participant	topic_1	Act of Meeting	Information Content Entity
+meeting_1	has occurrent part	deciding_1	Act of Meeting	Act of Directive Communication
+deciding_1	has agent	chair_1	Act of Directive Communication	Person
+deciding_1	realizes	authority_role_1	Act of Directive Communication	Authority Role
+deciding_1	has output	mandate_1	Act of Directive Communication	Process Regulation
+mandate_1	prescribes	required_work_1	Process Regulation	Planned Act
+deciding_1	precedes	documenting_1	Act of Directive Communication	Act of Official Documentation
+documenting_1	has agent	secretary_1	Act of Official Documentation	Person
+documenting_1	has output	minutes_file_1	Act of Official Documentation	Information Bearing Entity
+minutes_file_1	is carrier of	minutes_1	Information Bearing Entity	Report
+minutes_1	has continuant part	mandate_1	Report	Process Regulation
+mandate_id_1	designates	mandate_1	Non-Name Identifier	Process Regulation

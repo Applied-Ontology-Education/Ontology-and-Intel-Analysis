@@ -1,0 +1,9 @@
+# Step 7 check: every meeting, and whether the reasoner classified it as a decision meeting.
+# Expected on the reasoned file: meetings 1, 2, 4 true; meeting 3 (status briefing) false.
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX : <https://github.com/luay9/meeting-mandate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?meeting ?label ?isDecisionMeeting WHERE {
+  ?meeting a cco:ont00000144 ; rdfs:label ?label .
+  BIND(EXISTS { ?meeting a :DecisionMeeting } AS ?isDecisionMeeting)
+} ORDER BY ?meeting

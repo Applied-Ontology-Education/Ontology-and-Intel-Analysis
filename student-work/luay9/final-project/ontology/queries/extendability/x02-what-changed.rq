@@ -1,0 +1,27 @@
+# X02. What did a document add to things the base already knew?
+# Lists the triples in document D whose subject was already described by an
+# earlier document. These are the depth additions: new facts on old nodes.
+# Nothing is ever deleted, so "changed" always shows up as an added triple.
+# Change the VALUES line to ask about another document.
+PREFIX :        <https://github.com/luay9/meeting-mandate#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?subject ?predicate ?object ?firstSeenIn WHERE {
+  VALUES ?g { <https://github.com/luay9/meeting-mandate/graph/D05> }
+  GRAPH ?g { ?s ?p ?o . ?g dcterms:date ?d . }
+  FILTER (?s != ?g)
+  FILTER NOT EXISTS { GRAPH ?g { ?s a ?decl } FILTER (?decl IN (owl:ObjectProperty, owl:AnnotationProperty)) }
+  GRAPH ?g0 { ?s ?p0 ?o0 . ?g0 dcterms:date ?d0 ; dcterms:title ?firstSeenIn . }
+  FILTER (?d0 < ?d)
+  FILTER NOT EXISTS { GRAPH ?g1 { ?s ?p1 ?o1 . ?g1 dcterms:date ?d1 . } FILTER (?d1 < ?d0) }
+  OPTIONAL { GRAPH ?gs { ?s rdfs:label ?sl } }
+  OPTIONAL { GRAPH ?go { ?o rdfs:label ?ol } }
+  BIND (COALESCE(?sl, STR(?s)) AS ?subject)
+  OPTIONAL { GRAPH <https://github.com/luay9/meeting-mandate/graph/base> { ?p rdfs:label ?pl } }
+  BIND (COALESCE(STR(?pl), STR(?p)) AS ?predicate)
+  BIND (COALESCE(?ol, STR(?o)) AS ?object)
+}
+ORDER BY ?subject ?predicate

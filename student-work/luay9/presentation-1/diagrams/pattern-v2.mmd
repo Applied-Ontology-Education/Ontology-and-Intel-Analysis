@@ -1,0 +1,24 @@
+flowchart TB
+  MTG(["cco:Act of Meeting"])
+  GP(["cco:Group of Persons"])
+  TOP(["cco:Information Content Entity<br/>topic"])
+  DEC(["cco:Act of Directive Communication<br/>deciding · SPEECH ACT"])
+  AR(["cco:Authority Role<br/>felicity condition"])
+  PR(["cco:Process Regulation<br/>mandate"])
+  PA(["cco:Planned Act<br/>required work"])
+  DOC(["cco:Act of Official Documentation<br/>documenting · DOCUMENT ACT"])
+  MIN(["cco:Report<br/>minutes"])
+  IBE(["cco:Information Bearing Entity<br/>minutes file"])
+  ID(["cco:Non-Name Identifier<br/>mandate ID · M06 v1.1"])
+
+  MTG -- "has agent" --> GP
+  MTG -- "has participant" --> TOP
+  MTG -- "has occurrent part" --> DEC
+  DEC -- "realizes" --> AR
+  DEC -- "has output" --> PR
+  PR -- "prescribes" --> PA
+  DEC -- "precedes" --> DOC
+  DOC -- "has output" --> IBE
+  MIN -- "has continuant part" --> PR
+  IBE -- "is carrier of" --> MIN
+  ID -- "designates" --> PR

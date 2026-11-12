@@ -1,0 +1,19 @@
+# CQ2. Who issued a given mandate, and in virtue of what role?
+# The felicity condition: the act that output the mandate realizes an
+# authority role that its agent bears.
+PREFIX :     <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:  <https://www.commoncoreontologies.org/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?mandateID ?issuer ?role WHERE {
+  ?act cco:ont00001986 ?m .                      # has output
+  ?m a :Mandate .
+  ?act cco:ont00001833 ?p .                      # has agent
+  ?p a cco:ont00001262 ; rdfs:label ?issuer .    # Person
+  ?act obo:BFO_0000055 ?r .                      # realizes
+  ?p obo:BFO_0000196 ?r .                        # bearer of
+  ?r a cco:ont00000187 ; rdfs:label ?role .      # Authority Role
+  ?id cco:ont00001916 ?m ; rdfs:label ?mandateID .
+}
+ORDER BY ?mandateID

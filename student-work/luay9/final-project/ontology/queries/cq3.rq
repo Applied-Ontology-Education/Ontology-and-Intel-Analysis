@@ -1,0 +1,18 @@
+# CQ3. Which documents carry a given mandate?
+# A document has the mandate as a continuant part; a file is the carrier.
+# Restrict to one mandate with: VALUES ?mandateID { "M06 v1.1" }
+PREFIX :     <https://github.com/luay9/meeting-mandate#>
+PREFIX cco:  <https://www.commoncoreontologies.org/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?mandateID ?documentType ?document ?file WHERE {
+  ?doc obo:BFO_0000178 ?m ; rdfs:label ?document .   # has continuant part
+  ?m a :Mandate .
+  ?doc a ?t .
+  VALUES ?t { :MeetingMinutes :OfficialLetter :MeetingPresentation }
+  ?t rdfs:label ?documentType .
+  ?f obo:BFO_0000101 ?doc ; rdfs:label ?file .       # is carrier of
+  ?id cco:ont00001916 ?m ; rdfs:label ?mandateID .
+}
+ORDER BY ?mandateID ?documentType

@@ -1,0 +1,264 @@
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://github.com/luay9/meeting-mandate/test-individuals> a owl:Ontology ;
+    dcterms:title "Meeting & Mandate ontology: synthetic test individuals (Program A)"@en ;
+    dcterms:description "Fictional data for one programme, condensed from the synthetic timeline into four meetings. No real people, organisations or programmes. No meeting is typed as a decision meeting: the reasoner has to infer it."@en .
+
+#################################################################
+#  Relation declarations (same block as meeting-mandate.ttl)
+#################################################################
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+
+#################################################################
+#  People, role, group
+#################################################################
+
+:chair_1 a owl:NamedIndividual , cco:ont00001262 ;       # Person
+    rdfs:label "chair 1"@en ;
+    obo:BFO_0000196 :authority_role_1 .                   # bearer of
+
+:authority_role_1 a owl:NamedIndividual , cco:ont00000187 ;   # Authority Role
+    rdfs:label "authority role of chair 1"@en .
+
+:secretary_1 a owl:NamedIndividual , cco:ont00001262 ;   # Person
+    rdfs:label "secretary 1"@en .
+
+:attendees_1 a owl:NamedIndividual , cco:ont00000914 ;   # Group of Persons
+    rdfs:label "Program A steering group"@en ;
+    obo:BFO_0000115 :chair_1 , :secretary_1 .             # has member part
+
+#################################################################
+#  Objectives
+#################################################################
+
+:objective_1 a owl:NamedIndividual , cco:ont00000476 ;   # Objective
+    rdfs:label "Program A objective 1: operating model in place"@en ;
+    cco:ont00001942 :work_m01_v1_0 , :work_m01_v1_1 ,     # prescribes
+                    :work_m06_v1_0 , :work_m06_v1_1 .
+
+:objective_2 a owl:NamedIndividual , cco:ont00000476 ;   # Objective
+    rdfs:label "Program A objective 2: partners engaged"@en ;
+    cco:ont00001942 :work_m02_v1_0 ,                      # prescribes
+                    :work_m05_v1_0 , :work_m05_v1_1 .
+
+#################################################################
+#  Meeting 1 (synthetic 2025-07-10): issues M01 v1.0 and M02 v1.0
+#################################################################
+
+:meeting_1 a owl:NamedIndividual , cco:ont00000144 ;     # Act of Meeting
+    rdfs:label "meeting 1"@en ;
+    rdfs:comment "Synthetic date 2025-07-10."@en ;
+    cco:ont00001833 :attendees_1 ;                        # has agent
+    obo:BFO_0000117 :deciding_m01_v1_0 , :deciding_m02_v1_0 .   # has occurrent part
+
+:deciding_m01_v1_0 a owl:NamedIndividual , cco:ont00000133 ;   # Act of Directive Communication
+    rdfs:label "deciding M01 v1.0"@en ;
+    cco:ont00001833 :chair_1 ;                            # has agent
+    obo:BFO_0000055 :authority_role_1 ;                   # realizes
+    cco:ont00001986 :m01_v1_0 ;                           # has output
+    obo:BFO_0000063 :documenting_1 , :deciding_m01_v1_1 . # precedes
+
+:deciding_m02_v1_0 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M02 v1.0"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m02_v1_0 ;
+    obo:BFO_0000063 :documenting_1 .
+
+:documenting_1 a owl:NamedIndividual , cco:ont00000438 ;   # Act of Official Documentation
+    rdfs:label "documenting meeting 1"@en ;
+    cco:ont00001833 :secretary_1 ;                        # has agent
+    cco:ont00001986 :minutes_file_1 .                     # has output
+
+:minutes_file_1 a owl:NamedIndividual , cco:ont00000253 ;  # Information Bearing Entity
+    rdfs:label "minutes file, meeting 1"@en ;
+    obo:BFO_0000101 :minutes_1 .                          # is carrier of
+
+:minutes_1 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 1"@en ;
+    obo:BFO_0000178 :m01_v1_0 , :id_m01_v1_0 ,            # has continuant part
+                    :m02_v1_0 , :id_m02_v1_0 .
+
+#################################################################
+#  Meeting 2 (synthetic 2025-08-14 to 2025-09-18, condensed):
+#  issues M05 v1.0 and M06 v1.0
+#################################################################
+
+:meeting_2 a owl:NamedIndividual , cco:ont00000144 ;
+    rdfs:label "meeting 2"@en ;
+    rdfs:comment "Synthetic; stands in for the 2025-08-14 and 2025-09-18 meetings."@en ;
+    cco:ont00001833 :attendees_1 ;
+    obo:BFO_0000117 :deciding_m05_v1_0 , :deciding_m06_v1_0 .
+
+:deciding_m05_v1_0 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M05 v1.0"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m05_v1_0 ;
+    obo:BFO_0000063 :documenting_2 , :deciding_m05_v1_1 .
+
+:deciding_m06_v1_0 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M06 v1.0"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m06_v1_0 ;
+    obo:BFO_0000063 :documenting_2 , :deciding_m06_v1_1 .
+
+:documenting_2 a owl:NamedIndividual , cco:ont00000438 ;
+    rdfs:label "documenting meeting 2"@en ;
+    cco:ont00001833 :secretary_1 ;
+    cco:ont00001986 :minutes_file_2 .
+
+:minutes_file_2 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "minutes file, meeting 2"@en ;
+    obo:BFO_0000101 :minutes_2 .
+
+:minutes_2 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 2"@en ;
+    obo:BFO_0000178 :m05_v1_0 , :id_m05_v1_0 ,
+                    :m06_v1_0 , :id_m06_v1_0 .
+
+#################################################################
+#  Meeting 3: status briefing. Communicates, decides nothing.
+#  Must NOT be inferred to be a decision meeting.
+#################################################################
+
+:meeting_3 a owl:NamedIndividual , cco:ont00000144 ;
+    rdfs:label "meeting 3 (status briefing)"@en ;
+    rdfs:comment "Synthetic. Progress is reported; nothing is decided."@en ;
+    cco:ont00001833 :attendees_1 ;
+    obo:BFO_0000117 :briefing_3 .
+
+:briefing_3 a owl:NamedIndividual , cco:ont00000402 ;    # Act of Communication (not directive)
+    rdfs:label "progress briefing, meeting 3"@en ;
+    cco:ont00001833 :secretary_1 ;
+    obo:BFO_0000063 :documenting_3 .
+
+:documenting_3 a owl:NamedIndividual , cco:ont00000438 ;
+    rdfs:label "documenting meeting 3"@en ;
+    cco:ont00001833 :secretary_1 ;
+    cco:ont00001986 :minutes_file_3 .
+
+:minutes_file_3 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "minutes file, meeting 3"@en ;
+    obo:BFO_0000101 :minutes_3 .
+
+# Minutes with no mandate in them: why MeetingMinutes has no
+# "has continuant part some Mandate" axiom.
+:minutes_3 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 3"@en .
+
+#################################################################
+#  Meeting 4 (synthetic 2025-11-12 to 2026-02-24, condensed):
+#  re-issues M01, M05 and M06 as v1.1
+#################################################################
+
+:meeting_4 a owl:NamedIndividual , cco:ont00000144 ;
+    rdfs:label "meeting 4"@en ;
+    rdfs:comment "Synthetic; stands in for the 2025-11-12, 2026-01-20 and 2026-02-24 meetings."@en ;
+    cco:ont00001833 :attendees_1 ;
+    obo:BFO_0000117 :deciding_m01_v1_1 , :deciding_m05_v1_1 , :deciding_m06_v1_1 .
+
+:deciding_m01_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M01 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m01_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+:deciding_m05_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M05 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m05_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+:deciding_m06_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M06 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m06_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+:documenting_4 a owl:NamedIndividual , cco:ont00000438 ;
+    rdfs:label "documenting meeting 4"@en ;
+    cco:ont00001833 :secretary_1 ;
+    cco:ont00001986 :minutes_file_4 .
+
+:minutes_file_4 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "minutes file, meeting 4"@en ;
+    obo:BFO_0000101 :minutes_4 .
+
+:minutes_4 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 4"@en ;
+    obo:BFO_0000178 :m01_v1_1 , :id_m01_v1_1 ,
+                    :m05_v1_1 , :id_m05_v1_1 ,
+                    :m06_v1_1 , :id_m06_v1_1 .
+
+#################################################################
+#  Follow-up letter: restates M06 v1.1 and cites its identifier.
+#  Linked to the mandate without pointing at the minutes (CQ3).
+#################################################################
+
+:letter_1 a owl:NamedIndividual , :OfficialLetter ;
+    rdfs:label "follow-up letter on M06 v1.1"@en ;
+    obo:BFO_0000178 :m06_v1_1 , :id_m06_v1_1 .
+
+:letter_file_1 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "letter file 1"@en ;
+    obo:BFO_0000101 :letter_1 .
+
+#################################################################
+#  Mandates, identifiers and the work they prescribe
+#################################################################
+
+:m01_v1_0 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M01 v1.0 (scope)"@en ;
+    cco:ont00001942 :work_m01_v1_0 .
+:m01_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M01 v1.1 (scope, narrowed)"@en ;
+    cco:ont00001942 :work_m01_v1_1 .
+:m02_v1_0 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M02 v1.0 (incentive terms)"@en ;
+    cco:ont00001942 :work_m02_v1_0 .
+:m05_v1_0 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M05 v1.0 (roles)"@en ;
+    cco:ont00001942 :work_m05_v1_0 .
+:m05_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M05 v1.1 (roles + KPIs)"@en ;
+    cco:ont00001942 :work_m05_v1_1 .
+:m06_v1_0 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M06 v1.0 (operating model)"@en ;
+    cco:ont00001942 :work_m06_v1_0 .
+:m06_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M06 v1.1 (operating model, gaps + resubmit)"@en ;
+    cco:ont00001942 :work_m06_v1_1 .
+
+:id_m01_v1_0 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M01 v1.0" ; cco:ont00001916 :m01_v1_0 .
+:id_m01_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M01 v1.1" ; cco:ont00001916 :m01_v1_1 .
+:id_m02_v1_0 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M02 v1.0" ; cco:ont00001916 :m02_v1_0 .
+:id_m05_v1_0 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M05 v1.0" ; cco:ont00001916 :m05_v1_0 .
+:id_m05_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M05 v1.1" ; cco:ont00001916 :m05_v1_1 .
+:id_m06_v1_0 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M06 v1.0" ; cco:ont00001916 :m06_v1_0 .
+:id_m06_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M06 v1.1" ; cco:ont00001916 :m06_v1_1 .
+
+:work_m01_v1_0 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "define programme scope"@en .
+:work_m01_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "narrow programme scope"@en .
+:work_m02_v1_0 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "draft incentive terms"@en .
+:work_m05_v1_0 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "assign roles"@en .
+:work_m05_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "assign roles and set KPIs"@en .
+:work_m06_v1_0 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "design operating model"@en .
+:work_m06_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "close operating model gaps and resubmit"@en .

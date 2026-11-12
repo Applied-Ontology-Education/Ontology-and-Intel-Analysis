@@ -1,0 +1,4 @@
+# Control for CQ4: how many individuals are typed DecisionMeeting?
+# Expected: 0 on the asserted data, 3 on the reasoned file.
+PREFIX : <https://github.com/luay9/meeting-mandate#>
+SELECT (COUNT(DISTINCT ?x) AS ?decisionMeetings) WHERE { ?x a :DecisionMeeting }

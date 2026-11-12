@@ -1,0 +1,105 @@
+# Synthetic document D05 for the sustained-extendability test (see EXTENDABILITY.md).
+# No real people, organisations or programmes. One file = one document = one named graph.
+
+@prefix :     <https://github.com/luay9/meeting-mandate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+#  Relation declarations (the same block in every file; see BUILD.md)
+#################################################################
+
+obo:BFO_0000055 a owl:ObjectProperty .   # realizes
+obo:BFO_0000057 a owl:ObjectProperty .   # has participant
+obo:BFO_0000063 a owl:ObjectProperty .   # precedes
+obo:BFO_0000101 a owl:ObjectProperty .   # is carrier of
+obo:BFO_0000115 a owl:ObjectProperty .   # has member part
+obo:BFO_0000117 a owl:ObjectProperty .   # has occurrent part
+obo:BFO_0000132 a owl:ObjectProperty .   # occurrent part of
+obo:BFO_0000178 a owl:ObjectProperty .   # has continuant part
+obo:BFO_0000196 a owl:ObjectProperty .   # bearer of
+cco:ont00001833 a owl:ObjectProperty .   # has agent
+cco:ont00001986 a owl:ObjectProperty .   # has output
+cco:ont00001816 a owl:ObjectProperty .   # is output of
+cco:ont00001942 a owl:ObjectProperty .   # prescribes
+cco:ont00001916 a owl:ObjectProperty .   # designates
+skos:altLabel   a owl:AnnotationProperty .
+skos:prefLabel  a owl:AnnotationProperty .
+skos:scopeNote  a owl:AnnotationProperty .
+
+<https://github.com/luay9/meeting-mandate/graph/D05> a owl:Ontology ;
+    dcterms:title "D05: minutes of meeting 4"@en ;
+    dcterms:date "2026-02-24" ;
+    dcterms:description "Depth. Three mandates are re-issued as v1.1. The new triples attach to individuals from D01, D02 and D03 (the earlier acts of deciding, the objectives) instead of copying or overwriting them. This is the document that makes CQ1 answerable."@en .
+
+:meeting_4 a owl:NamedIndividual , cco:ont00000144 ;     # Act of Meeting
+    rdfs:label "meeting 4"@en ;
+    cco:ont00001833 :attendees_1 ;
+    obo:BFO_0000117 :deciding_m01_v1_1 , :deciding_m05_v1_1 , :deciding_m06_v1_1 .
+
+:deciding_m01_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M01 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m01_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+:deciding_m05_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M05 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m05_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+:deciding_m06_v1_1 a owl:NamedIndividual , cco:ont00000133 ;
+    rdfs:label "deciding M06 v1.1"@en ;
+    cco:ont00001833 :chair_1 ;
+    obo:BFO_0000055 :authority_role_1 ;
+    cco:ont00001986 :m06_v1_1 ;
+    obo:BFO_0000063 :documenting_4 .
+
+#################################################################
+#  Depth on earlier documents. The earlier decisions precede the
+#  re-issues; v1.0 is never edited or replaced.
+#################################################################
+
+:deciding_m01_v1_0 obo:BFO_0000063 :deciding_m01_v1_1 .   # the earlier act is from D01
+:deciding_m05_v1_0 obo:BFO_0000063 :deciding_m05_v1_1 .   # from D02
+:deciding_m06_v1_0 obo:BFO_0000063 :deciding_m06_v1_1 .   # from D02
+
+:objective_1 cco:ont00001942 :work_m01_v1_1 , :work_m06_v1_1 .   # the objectives are from D03
+:objective_2 cco:ont00001942 :work_m05_v1_1 .
+
+:documenting_4 a owl:NamedIndividual , cco:ont00000438 ;
+    rdfs:label "documenting meeting 4"@en ;
+    cco:ont00001833 :secretary_1 ;
+    cco:ont00001986 :minutes_file_4 .
+
+:minutes_file_4 a owl:NamedIndividual , cco:ont00000253 ;
+    rdfs:label "minutes file, meeting 4"@en ;
+    obo:BFO_0000101 :minutes_4 .
+
+:minutes_4 a owl:NamedIndividual , :MeetingMinutes ;
+    rdfs:label "minutes of meeting 4"@en ;
+    obo:BFO_0000178 :m01_v1_1 , :id_m01_v1_1 ,
+                    :m05_v1_1 , :id_m05_v1_1 ,
+                    :m06_v1_1 , :id_m06_v1_1 .
+
+:m01_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M01 v1.1 (scope, narrowed)"@en ;
+    cco:ont00001942 :work_m01_v1_1 .
+:m05_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M05 v1.1 (roles + KPIs)"@en ;
+    cco:ont00001942 :work_m05_v1_1 .
+:m06_v1_1 a owl:NamedIndividual , :Mandate ; rdfs:label "mandate M06 v1.1 (operating model, gaps + resubmit)"@en ;
+    cco:ont00001942 :work_m06_v1_1 .
+
+:id_m01_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M01 v1.1" ; cco:ont00001916 :m01_v1_1 .
+:id_m05_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M05 v1.1" ; cco:ont00001916 :m05_v1_1 .
+:id_m06_v1_1 a owl:NamedIndividual , :MandateIdentifier ; rdfs:label "M06 v1.1" ; cco:ont00001916 :m06_v1_1 .
+
+:work_m01_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "narrow programme scope"@en .
+:work_m05_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "assign roles and set KPIs"@en .
+:work_m06_v1_1 a owl:NamedIndividual , cco:ont00000228 ; rdfs:label "close operating model gaps and resubmit"@en .

@@ -1,0 +1,12 @@
+# Custom ROBOT report rule: a class in this ontology's namespace with no
+# English skos:definition. Replaces ROBOT's missing_definition, which only
+# checks IAO:0000115 (the OBO convention); CCO and this ontology use skos:definition.
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?entity ?property ?value WHERE {
+  VALUES ?property { skos:definition }
+  ?entity a owl:Class .
+  FILTER (STRSTARTS(STR(?entity), "https://github.com/luay9/meeting-mandate#"))
+  FILTER NOT EXISTS { ?entity skos:definition ?d FILTER (LANGMATCHES(LANG(?d), "en")) }
+}
+ORDER BY ?entity

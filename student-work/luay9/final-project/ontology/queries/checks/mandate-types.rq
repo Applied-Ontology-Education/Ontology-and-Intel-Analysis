@@ -1,0 +1,11 @@
+# Step 7 check: all named types of each mandate, asserted and inferred.
+# Expected for every mandate: mandate, Process Regulation, Prescriptive ICE,
+# ICE, generically dependent continuant, continuant, entity.
+PREFIX : <https://github.com/luay9/meeting-mandate#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?mandate ?type WHERE {
+  ?m a :Mandate ; rdfs:label ?mandate .
+  ?m a ?t . FILTER(isIRI(?t))
+  ?t rdfs:label ?type .
+}
+ORDER BY ?mandate ?type

@@ -1,0 +1,1160 @@
+@prefix : <https://www.commoncoreontologies.org/AgentOntology/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix intel: <https://example.org/ontologies/intel-ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://www.commoncoreontologies.org/AgentOntology/> .
+
+<https://example.org/ontologies/intel-ontology> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://example.org/ontologies/intel-ontology/1.0> ;
+                                                 owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl> ,
+                                                             <http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl> ,
+                                                             cco:EventOntology ,
+                                                             cco:InformationEntityOntology ,
+                                                             <https://www.commoncoreontologies.org/2026-08-13/AgentOntology> ;
+                                                 rdfs:label "Intel Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+dcterms:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+cco:ont00001754 rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+cco:ont00001760 rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdfs:subPropertyOf obo:BFO_0000056 .
+
+
+###  https://example.org/ontologies/intel-ontology#cites_evidence
+intel:cites_evidence rdf:type owl:ObjectProperty ;
+                     rdfs:domain intel:investigation_finding_information ;
+                     rdfs:range obo:BFO_0000001 ;
+                     rdfs:label "cites_evidence" ;
+                     skos:definition "A cites-evidence relation is an object property that relates an investigation finding information entity to an entity cited as evidence for that finding." .
+
+
+###  https://example.org/ontologies/intel-ontology#designates_person
+intel:designates_person rdf:type owl:ObjectProperty ;
+                        rdfs:domain intel:Act_of_Investigation_Report_Designation ;
+                        rdfs:range :person ;
+                        rdfs:label "designates_person" ;
+                        skos:definition "A designates-person relation is an object property that relates an investigation report designation process to the person identified as the subject of the designation." .
+
+
+###  https://example.org/ontologies/intel-ontology#designates_role
+intel:designates_role rdf:type owl:ObjectProperty ;
+                      rdfs:domain intel:Act_of_Investigation_Report_Designation ;
+                      rdfs:range :Person_Of_Interest ;
+                      rdfs:label "designates_role" ;
+                      skos:definition "A designates-role relation is an object property that relates an investigation report designation process to the particular person-of-interest role assigned through that designation." .
+
+
+###  https://example.org/ontologies/intel-ontology#designation_based_on_review
+intel:designation_based_on_review rdf:type owl:ObjectProperty ;
+                                  rdfs:domain intel:Act_of_Investigation_Report_Designation ;
+                                  rdfs:range intel:Act_of_Investigation_Report_Review ;
+                                  rdfs:label "designation_based_on_review" ;
+                                  skos:definition "A designation-based-on-review relation is an object property that relates an investigation report designation process to the investigation report review process informing that designation." .
+
+
+###  https://example.org/ontologies/intel-ontology#has_documented_finding
+intel:has_documented_finding rdf:type owl:ObjectProperty ;
+                             rdfs:domain intel:investigation_report_information ;
+                             rdfs:range intel:investigation_finding_information ;
+                             rdfs:label "has_documented_finding" ;
+                             skos:definition "A has-documented-finding relation is an object property that relates an investigation report information entity to an investigation finding information entity recorded in that report." .
+
+
+###  https://example.org/ontologies/intel-ontology#review_considered_finding
+intel:review_considered_finding rdf:type owl:ObjectProperty ;
+                                rdfs:domain intel:Act_of_Investigation_Report_Review ;
+                                rdfs:range intel:investigation_finding_information ;
+                                rdfs:label "review_considered_finding" ;
+                                skos:definition "A review-considered-finding relation is an object property that relates an investigation report review process to an investigation finding information entity examined during that review." .
+
+
+###  https://example.org/ontologies/intel-ontology#reviewed_report
+intel:reviewed_report rdf:type owl:ObjectProperty ;
+                      rdfs:domain intel:Act_of_Investigation_Report_Review ;
+                      rdfs:range intel:Investigation_report ;
+                      rdfs:label "reviewed_report" ;
+                      skos:definition "A reviewed-report relation is an object property that relates an investigation report review process to the material investigation report examined during that process." .
+
+
+###  https://www.commoncoreontologies.org/ont00001787
+cco:ont00001787 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000056 ;
+                owl:inverseOf cco:ont00001833 ;
+                rdfs:domain cco:ont00001017 ;
+                rdfs:range obo:BFO_0000015 ;
+                rdfs:label "agent in"@en ;
+                skos:definition "x agent_in y iff y is an instance of Process and x is an instance of Agent, such that x is causally active in y."@en ;
+                cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001833
+cco:ont00001833 rdf:type owl:ObjectProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001866
+cco:ont00001866 rdf:type owl:ObjectProperty ;
+                owl:inverseOf cco:ont00001984 ;
+                rdfs:domain obo:BFO_0000015 ;
+                rdfs:range cco:ont00001017 ;
+                dcterms:created "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
+                rdfs:label "is interest of"@en ;
+                skos:definition "x is interest of y =Def y has interest in x."@en ;
+                skos:prefLabel "is interest of"@en ;
+                cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001895
+cco:ont00001895 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000056 ;
+                rdfs:domain cco:ont00001017 ;
+                rdfs:range obo:BFO_0000015 ;
+                rdfs:label "accomplice in"@en ;
+                skos:definition "Agent x is accomplice_in Process y iff x assists in the commission of y, is located at the location of y, but is not agent_in y."@en ;
+                cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Accomplice&oldid=1002047204"^^xsd:anyURI ;
+                cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001939
+cco:ont00001939 rdf:type owl:ObjectProperty ;
+                owl:inverseOf cco:ont00001977 ;
+                rdfs:domain cco:ont00001017 ;
+                rdfs:range cco:ont00001017 ;
+                rdfs:label "is affiliated with"@en ;
+                skos:definition "x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
+                cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001977
+cco:ont00001977 rdf:type owl:ObjectProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001984
+cco:ont00001984 rdf:type owl:ObjectProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/is_author_of
+:is_author_of rdf:type owl:ObjectProperty ;
+              rdfs:domain :person ;
+              rdfs:range :Post ;
+              skos:definition "An is-author-of relation is an object property that relates a person to a post for which that person is responsible as author."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/is_registered_guest
+:is_registered_guest rdf:type owl:ObjectProperty ;
+                     rdfs:domain :person ;
+                     rdfs:label "is registered guest on" ;
+                     skos:definition "An is-registered-guest-on relation is an object property that relates a person to an arrangement or record on which that person is registered as a guest."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/possesses
+:possesses rdf:type owl:ObjectProperty ;
+           rdfs:domain :person ;
+           rdfs:range obo:BFO_0000002 ;
+           rdfs:label "possesses" ;
+           skos:definition "A possesses relation is an object property that relates a person to a continuant held or controlled by that person without necessarily asserting legal ownership."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://example.org/ontologies/intel-ontology#has_assessment_rationale
+intel:has_assessment_rationale rdf:type owl:DatatypeProperty ;
+                               rdfs:label "has_assessment_rationale" ;
+                               skos:definition "A has-assessment-rationale relation is a datatype property that associates an investigation finding information entity with a literal value expressing the reasons for its assessment." .
+
+
+###  https://example.org/ontologies/intel-ontology#has_case_identifier
+intel:has_case_identifier rdf:type owl:DatatypeProperty .
+
+
+###  https://example.org/ontologies/intel-ontology#has_finding_text
+intel:has_finding_text rdf:type owl:DatatypeProperty ;
+                       rdfs:label "has_finding_text" ;
+                       skos:definition "A has-finding-text relation is a datatype property that associates an investigation finding information entity with a literal value expressing the content of the finding." .
+
+
+###  https://example.org/ontologies/intel-ontology#has_verification_status
+intel:has_verification_status rdf:type owl:DatatypeProperty ;
+                              rdfs:label "has_verification_status" ;
+                              skos:definition "A has-verification-status relation is a datatype property that associates an investigation finding information entity with a literal value recording the reported verification status of its claim." .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_ICAO_Telephony
+:has_ICAO_Telephony rdf:type owl:DatatypeProperty ;
+                    skos:definition "A has-ICAO-telephony relation is a datatype property that records the telephony designator associated with an aircraft operator as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_ICAO_code
+:has_ICAO_code rdf:type owl:DatatypeProperty ;
+               skos:definition "A has-ICAO-code relation is a datatype property that records an ICAO airline designator as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_MSN
+:has_MSN rdf:type owl:DatatypeProperty ;
+         skos:definition "A has-MSN relation is a datatype property that records a manufacturer's serial number as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_Mode_S_Hex_Code
+:has_Mode_S_Hex_Code rdf:type owl:DatatypeProperty ;
+                     skos:definition "A has-Mode-S-hex-code relation is a datatype property that records an aircraft's Mode S hexadecimal identification code as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport
+:has_arrival_airport rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     skos:definition "A has-arrival-airport relation is a datatype property that associates an information-bearing entity with a literal identifying the intended arrival airport."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_gate
+:has_boarding_gate rdf:type owl:DatatypeProperty ;
+                   skos:definition "A has-boarding-gate relation is a datatype property that records the designated boarding gate as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_group
+:has_boarding_group rdf:type owl:DatatypeProperty ;
+                    skos:definition "A has-boarding-group relation is a datatype property that records the assigned passenger boarding group as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_time
+:has_boarding_time rdf:type owl:DatatypeProperty ;
+                   skos:definition "A has-boarding-time relation is a datatype property that records the scheduled or assigned boarding time as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_departure_airport
+:has_departure_airport rdf:type owl:DatatypeProperty ;
+                       skos:definition "A has-departure-airport relation is a datatype property that associates an information-bearing entity with a literal identifying the intended departure airport."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_first_name
+:has_first_name rdf:type owl:DatatypeProperty ;
+                skos:definition "A has-first-name relation is a datatype property that records a person's given name in an information-bearing record as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_last_name
+:has_last_name rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               skos:definition "A has-last-name relation is a datatype property that records a person's family name in an information-bearing record as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_reservation_number
+:has_reservation_number rdf:type owl:DatatypeProperty ;
+                        skos:definition "A has-reservation-number relation is a datatype property that records an identifier assigned to a reservation as a literal value."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_tail_number
+:has_tail_number rdf:type owl:DatatypeProperty ;
+                 skos:definition "A has-tail-number relation is a datatype property that records an aircraft's registration identifier as a literal value."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://example.org/ontologies/intel-ontology#Act_of_Investigation
+intel:Act_of_Investigation rdf:type owl:Class ;
+                           rdfs:subClassOf obo:BFO_0000015 ;
+                           rdfs:label "Act of Investigation" ;
+                           skos:definition "An act of investigation is a process that involves gathering and examining information or evidence relevant to a specified inquiry." .
+
+
+###  https://example.org/ontologies/intel-ontology#Act_of_Investigation_Report_Designation
+intel:Act_of_Investigation_Report_Designation rdf:type owl:Class ;
+                                              rdfs:subClassOf obo:BFO_0000015 ;
+                                              rdfs:label "Act of Investigation Report Designation" ;
+                                              skos:definition "An act of investigation report designation is a process that records an investigator's decision to designate a person as a person of interest on the basis of a reviewed investigation report." .
+
+
+###  https://example.org/ontologies/intel-ontology#Act_of_Investigation_Report_Review
+intel:Act_of_Investigation_Report_Review rdf:type owl:Class ;
+                                         rdfs:subClassOf obo:BFO_0000015 ;
+                                         rdfs:label "Act of Investigation Report Review" ;
+                                         skos:definition "An act of investigation report review is a process that involves an investigator examining an investigation report and its documented findings to evaluate their relevance to an inquiry." .
+
+
+###  https://example.org/ontologies/intel-ontology#Investigation_report
+intel:Investigation_report rdf:type owl:Class ;
+                           rdfs:subClassOf obo:IAO_0000178 ;
+                           rdfs:label "Investigation report" ;
+                           skos:definition "An investigation report is a material information bearer that carries information documenting findings and assessments produced through an investigation." .
+
+
+###  https://example.org/ontologies/intel-ontology#counter_terrorism_investigator
+intel:counter_terrorism_investigator rdf:type owl:Class ;
+                                     rdfs:subClassOf obo:BFO_0000023 ;
+                                     rdfs:label "counter terrorism investigator" ;
+                                     skos:definition "A counterterrorism investigator role is a role that is borne by a person who investigates potential terrorism-related activities or events on behalf of a law enforcement agency." .
+
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation
+intel:hotel_reservation rdf:type owl:Class ;
+                        rdfs:subClassOf intel:reservation ;
+                        rdfs:label "hotel reservation" ;
+                        skos:definition "A hotel reservation is a reservation that materially bears information about an arrangement to reserve lodging at a hotel."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#investigation_finding_information
+intel:investigation_finding_information rdf:type owl:Class ;
+                                        rdfs:subClassOf obo:IAO_0000030 ;
+                                        rdfs:label "investigation_finding_information" ;
+                                        skos:definition "An investigation finding information entity is an information content entity that records an observation, claim, or assessment relevant to an investigation." .
+
+
+###  https://example.org/ontologies/intel-ontology#investigation_report_information
+intel:investigation_report_information rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:IAO_0000030 ;
+                                       rdfs:label "investigation_report_information" ;
+                                       skos:definition "An investigation report information entity is an information content entity that records findings, supporting evidence references, and assessments arising from an investigation." .
+
+
+###  https://example.org/ontologies/intel-ontology#reservation
+intel:reservation rdf:type owl:Class ;
+                  rdfs:subClassOf obo:IAO_0000178 ;
+                  rdfs:label "reservation" ;
+                  skos:definition "A reservation is a material information bearer that carries information recording an arrangement to reserve a service, place, or entitlement."@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001017
+cco:ont00001017 rdf:type owl:Class .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology#driver's_license
+<https://www.commoncoreontologies.org/AgentOntology#driver's_license> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf :license ;
+                                                                      rdfs:label "driver's license" ;
+                                                                      skos:definition "A driver's license is a license that materially bears information identifying a person and documenting that person's authorization to operate specified motor vehicles."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting
+:Act_of_Facebook_posting rdf:type owl:Class ;
+                         rdfs:subClassOf :Act_of_Social_Media_Posting ;
+                         rdfs:label "Act of Facebook posting" ;
+                         skos:definition "An act of Facebook posting is an act of social media posting that publishes content through the Facebook platform."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan
+:Act_of_Flight_Plan rdf:type owl:Class ;
+                    rdfs:subClassOf obo:BFO_0000015 ;
+                    rdfs:label "Act of Flight Plan" ;
+                    skos:definition "An act of flight planning is a process that creates or issues information specifying an intended aircraft flight."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting
+:Act_of_Social_Media_Posting rdf:type owl:Class ;
+                             rdfs:subClassOf obo:BFO_0000015 ;
+                             rdfs:label "Act of Social Media Posting" ;
+                             skos:definition "An act of social media posting is a process that makes authored content available through a social media service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Airplane
+:Airplane rdf:type owl:Class ;
+          rdfs:subClassOf obo:BFO_0000030 ;
+          skos:definition "An airplane is an object that is a powered fixed-wing aircraft designed to fly by generating aerodynamic lift."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane
+:Commcercial_airplane rdf:type owl:Class ;
+                      rdfs:subClassOf :Airplane ;
+                      skos:definition "A commercial airplane is an airplane that is operated to transport passengers or cargo as part of a commercial air service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook
+:Facebook rdf:type owl:Class ;
+          rdfs:subClassOf :Social_Media ;
+          rdfs:label "Facebook Content" ;
+          skos:definition "Facebook content is social media content that conveys information published or shared through the Facebook social media service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook_Post
+:Facebook_Post rdf:type owl:Class ;
+               rdfs:subClassOf :Facebook ;
+               rdfs:label "Facebook Post Information" ;
+               skos:definition "Facebook post information is Facebook content that conveys the information expressed in a particular post published through the Facebook social media service.."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Flight_plan
+:Flight_plan rdf:type owl:Class ;
+             rdfs:subClassOf obo:IAO_0000030 ;
+             rdfs:label "Flight plan" ;
+             skos:definition "A flight plan is an information content entity that specifies intended aspects of an aircraft flight, including its planned route or destination."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger
+:Jetblue_passenger rdf:type owl:Class ;
+                   rdfs:subClassOf :passenger ;
+                   rdfs:label "Jetblue passenger" ;
+                   skos:definition "A JetBlue passenger role is a passenger role that is borne by a person traveling or designated to travel on a JetBlue-operated flight."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest
+:Person_Of_Interest rdf:type owl:Class ;
+                    rdfs:subClassOf obo:BFO_0000023 ;
+                    rdfs:label "Person of Interest" ;
+                    skos:definition "A person-of-interest role is a role that is assigned to a person identified as relevant to a particular investigation or assessment without itself implying wrongdoing."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Post
+:Post rdf:type owl:Class ;
+      rdfs:subClassOf obo:IAO_0000178 ;
+      rdfs:label "Post" ;
+      skos:definition "A post is a material information bearer that carries information communicated or intended to be communicated through a publication medium."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Social_Media
+:Social_Media rdf:type owl:Class ;
+              rdfs:subClassOf cco:ont00002001 ;
+              rdfs:label "Social Media Content" ;
+              skos:definition "Social media content is a media content entity that conveys information created, published, or shared through a social media service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airline_reservation
+:airline_reservation rdf:type owl:Class ;
+                     rdfs:subClassOf :reservation ;
+                     rdfs:label "airline reservation information" ;
+                     skos:definition "An airline reservation information entity is a reservation information entity that records an arrangement to reserve travel on an airline service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airport
+:airport rdf:type owl:Class ;
+         rdfs:subClassOf :building ;
+         skos:definition "An airport is a building that provides facilities for the arrival, departure, or servicing of aircraft."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/arrival_airport
+:arrival_airport rdf:type owl:Class ;
+                 rdfs:subClassOf :airport ;
+                 rdfs:label "Arrival airport" ;
+                 skos:definition "An arrival airport is an airport that serves as the destination for an aircraft flight."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/boarding_pass
+:boarding_pass rdf:type owl:Class ;
+               rdfs:subClassOf :pass ;
+               skos:definition "A boarding pass is a pass that materially bears information indicating permission to board a particular transportation service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/building
+:building rdf:type owl:Class ;
+          rdfs:subClassOf obo:BFO_0000030 ;
+          rdfs:label "Building" ;
+          skos:definition "A building is an object that is a constructed structure designed to enclose or shelter people, activities, or other entities."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_attendee
+:concert_attendee rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000023 ;
+                  rdfs:label "concert attendee" ;
+                  skos:definition "A concert attendee role is a role that is borne by a person attending or scheduled to attend a concert."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information
+:concert_reservation_information rdf:type owl:Class ;
+                                 rdfs:subClassOf :reservation ;
+                                 rdfs:label "concert reservation information" ;
+                                 skos:definition "A concert reservation information entity is a reservation information entity that records an arrangement to reserve admission or attendance at a concert."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_ticket
+:concert_ticket rdf:type owl:Class ;
+                rdfs:subClassOf :ticket ;
+                skos:definition "A concert ticket is a ticket that materially bears information concerning admission to a concert."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/departure_airport
+:departure_airport rdf:type owl:Class ;
+                   rdfs:subClassOf :airport ;
+                   rdfs:label "Departure airport" ;
+                   skos:definition "A departure airport is an airport that serves as the starting airport for an aircraft flight."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/driver_license
+:driver_license rdf:type owl:Class ;
+                rdfs:subClassOf :personal_identification ;
+                rdfs:label "driver's license" ;
+                skos:definition "A driver's license information entity is a personal identification that identifies a person and records information about authorization to operate specified motor vehicles."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/event_venue
+:event_venue rdf:type owl:Class ;
+             rdfs:subClassOf cco:ont00000544 ;
+             rdfs:label "concert venue" ;
+             skos:definition "A concert venue is an event venue that provides a physical setting in which a live musical performance may take place."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/facebook_user
+:facebook_user rdf:type owl:Class ;
+               rdfs:subClassOf :social_media_user ;
+               rdfs:label "Facebook user" ;
+               skos:definition "A Facebook user role is a social media user role that is borne by a person who uses the Facebook platform."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/guest
+:guest rdf:type owl:Class ;
+       rdfs:subClassOf obo:BFO_0000023 ;
+       rdfs:label "guest" ;
+       skos:definition "A guest role is a role that is borne by a person receiving or registered to receive hospitality or accommodation."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel
+:hotel rdf:type owl:Class ;
+       rdfs:subClassOf :building ;
+       rdfs:label "hotel" ;
+       skos:definition "A hotel is a building that provides temporary lodging and associated guest services."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information
+:hotel_reservation_information rdf:type owl:Class ;
+                               rdfs:subClassOf :reservation ;
+                               rdfs:label "hotel reservation information" ;
+                               skos:definition "A hotel reservation information entity is a reservation information entity that records an arrangement to reserve lodging at a hotel."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/license
+:license rdf:type owl:Class ;
+         rdfs:subClassOf obo:IAO_0000178 ;
+         rdfs:label "license" ;
+         skos:definition "A license is a material information bearer that carries information recording an authorization granted to an identified bearer."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/organization
+:organization rdf:type owl:Class ;
+              rdfs:subClassOf obo:BFO_0000027 ;
+              rdfs:label "Organization" ;
+              skos:definition "An organization is an object aggregate that comprises agents coordinated through a shared structure, purpose, or activity."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/pass
+:pass rdf:type owl:Class ;
+      rdfs:subClassOf obo:IAO_0000178 ;
+      skos:definition "A pass is a material information bearer that carries information indicating permission to access a place, activity, or service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/passenger
+:passenger rdf:type owl:Class ;
+           rdfs:subClassOf obo:BFO_0000023 ;
+           rdfs:label "passenger" ;
+           skos:definition "A passenger role is a role that is borne by a person who travels or is designated to travel on a transportation service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/person
+:person rdf:type owl:Class ;
+        rdfs:subClassOf obo:BFO_0000030 ;
+        skos:definition "A person is an object that is an individual human being."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/personal_identification
+:personal_identification rdf:type owl:Class ;
+                         rdfs:subClassOf cco:ont00000686 ;
+                         rdfs:label "personal identification" ;
+                         skos:definition "A personal identification is a designative information content entity that uses symbols or identifiers to designate a particular person."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/reservation
+:reservation rdf:type owl:Class ;
+             rdfs:subClassOf obo:IAO_0000030 ;
+             rdfs:label "reservation information" ;
+             skos:definition "A reservation information entity is an information content entity that records an arrangement to reserve a place, service, or entitlement."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/social_media_user
+:social_media_user rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000023 ;
+                   rdfs:label "social media user" ;
+                   skos:definition "A social media user role is a role that is borne by a person who uses a social media service."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/terrorist_organization
+:terrorist_organization rdf:type owl:Class ;
+                        rdfs:subClassOf :organization ;
+                        rdfs:label "Terrorist organization" ;
+                        skos:definition "A terrorist organization is an organization that carries out, organizes, or supports acts of terrorism in pursuit of its objectives."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/ticket
+:ticket rdf:type owl:Class ;
+        rdfs:subClassOf obo:IAO_0000178 ;
+        skos:definition "A ticket is a material information bearer that carries information concerning admission to an event or authorization to use a service."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/ontologies/intel-ontology#Act_of_Investigation_Report_Designation_01
+intel:Act_of_Investigation_Report_Designation_01 rdf:type owl:NamedIndividual ,
+                                                          intel:Act_of_Investigation_Report_Designation ;
+                                                 intel:designates_person intel:person_02 ;
+                                                 intel:designates_role intel:Person_of_Interest_01 ;
+                                                 intel:designation_based_on_review intel:Act_of_Investigation_Report_Review_01 ;
+                                                 rdfs:label "Act of Investigation Report Designation 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#Act_of_Investigation_Report_Review_01
+intel:Act_of_Investigation_Report_Review_01 rdf:type owl:NamedIndividual ,
+                                                     intel:Act_of_Investigation_Report_Review ;
+                                            intel:review_considered_finding intel:finding_01 ,
+                                                                            intel:finding_02 ,
+                                                                            intel:finding_03 ,
+                                                                            intel:finding_04 ,
+                                                                            intel:finding_05 ,
+                                                                            intel:finding_06 ;
+                                            intel:reviewed_report intel:Investigation_report_01 ;
+                                            rdfs:label "Act of Investigation Report Review 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#Act_of_investigation_01
+intel:Act_of_investigation_01 rdf:type owl:NamedIndividual ,
+                                       intel:Act_of_Investigation ;
+                              cco:ont00001986 intel:Investigation_report_01 ;
+                              rdfs:label "Act of investigation 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#Concert_Ticket_02
+intel:Concert_Ticket_02 rdf:type owl:NamedIndividual ,
+                                 :concert_ticket ;
+                        obo:BFO_0000101 intel:concert_reservation_information_02 ;
+                        rdfs:label "concert_ticket_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#Facebook_Post_Information_02
+intel:Facebook_Post_Information_02 rdf:type owl:NamedIndividual ,
+                                            :Facebook_Post ;
+                                   obo:BFO_0000084 intel:Post_02 ;
+                                   obo:IAO_0000136 :concert_attack ;
+                                   rdfs:label "Facebook_Post_Information_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#Facebook_Post_Information_03
+intel:Facebook_Post_Information_03 rdf:type owl:NamedIndividual ,
+                                            :Facebook_Post ;
+                                   obo:BFO_0000084 intel:Post_03 ;
+                                   obo:IAO_0000136 :terrorist_organization_01 ;
+                                   rdfs:label "Facebook_Post_Information_03" .
+
+
+###  https://example.org/ontologies/intel-ontology#Facebook_Post_Information_04
+intel:Facebook_Post_Information_04 rdf:type owl:NamedIndividual ,
+                                            :Facebook_Post ;
+                                   obo:BFO_0000084 intel:Post_04 ;
+                                   obo:IAO_0000136 :event_venue_01 ;
+                                   rdfs:label "Facebook_Post_Information_04" .
+
+
+###  https://example.org/ontologies/intel-ontology#Investigation_report_01
+intel:Investigation_report_01 rdf:type owl:NamedIndividual ,
+                                       intel:Investigation_report ;
+                              obo:BFO_0000101 intel:investigation_report_information_01 ;
+                              cco:ont00001816 intel:Act_of_investigation_01 ;
+                              rdfs:label "investigation report 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#Person_of_Interest_01
+intel:Person_of_Interest_01 rdf:type owl:NamedIndividual ,
+                                     :Person_Of_Interest ;
+                            rdfs:label "Person_of_Interest_01" .
+
+
+###  https://example.org/ontologies/intel-ontology#Post_02
+intel:Post_02 rdf:type owl:NamedIndividual ,
+                       :Post ;
+              obo:BFO_0000101 intel:Facebook_Post_Information_02 ;
+              rdfs:label "Post_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#Post_03
+intel:Post_03 rdf:type owl:NamedIndividual ,
+                       :Post ;
+              obo:BFO_0000101 intel:Facebook_Post_Information_03 ;
+              rdfs:label "Post_03" .
+
+
+###  https://example.org/ontologies/intel-ontology#Post_04
+intel:Post_04 rdf:type owl:NamedIndividual ,
+                       :Post ;
+              obo:BFO_0000101 intel:Facebook_Post_Information_04 ;
+              rdfs:label "Post_04" .
+
+
+###  https://example.org/ontologies/intel-ontology#airline_reservation_information_02
+intel:airline_reservation_information_02 rdf:type owl:NamedIndividual ,
+                                                  :airline_reservation ;
+                                         obo:BFO_0000084 intel:boarding_pass_02 ;
+                                         rdfs:label "airline_reservation_information_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#boarding_pass_02
+intel:boarding_pass_02 rdf:type owl:NamedIndividual ,
+                                :boarding_pass ;
+                       obo:BFO_0000101 intel:airline_reservation_information_02 ;
+                       rdfs:label "boarding_pass_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#concert_reservation_information_02
+intel:concert_reservation_information_02 rdf:type owl:NamedIndividual ,
+                                                  :concert_reservation_information ;
+                                         obo:BFO_0000084 intel:Concert_Ticket_02 ;
+                                         rdfs:label "concert_reservation_information_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#counter_terrorism_investigator_01
+intel:counter_terrorism_investigator_01 rdf:type owl:NamedIndividual ,
+                                                 intel:counter_terrorism_investigator ;
+                                        rdfs:label "counter_terrorism_investigator_01" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_01
+intel:finding_01 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:boarding_pass_02 ;
+                 intel:has_finding_text "Alicia King possesses a boarding pass." ;
+                 rdfs:label "finding_01" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_02
+intel:finding_02 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:hotel_reservation_02 ;
+                 intel:has_finding_text "Alicia King possesses a hotel reservation." ;
+                 rdfs:label "finding_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_03
+intel:finding_03 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:Concert_Ticket_02 ;
+                 intel:has_finding_text "Alicia King possesses a concert ticket." ;
+                 rdfs:label "finding_03" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_04
+intel:finding_04 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:Post_02 ;
+                 intel:has_finding_text "Alicia King authored a post concerning the concert attack." ;
+                 rdfs:label "finding_04" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_05
+intel:finding_05 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:Post_03 ;
+                 intel:has_finding_text "A post associated with Alicia King was assessed as expressing support for Rising Dawn." ;
+                 rdfs:label "finding_05" .
+
+
+###  https://example.org/ontologies/intel-ontology#finding_06
+intel:finding_06 rdf:type owl:NamedIndividual ,
+                          intel:investigation_finding_information ;
+                 intel:cites_evidence intel:Post_04 ;
+                 intel:has_finding_text "A post associated with Alicia King was assessed as expressing support for political violence against The Chicago Theatre." ;
+                 rdfs:label "finding_06" .
+
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation_01
+intel:hotel_reservation_01 rdf:type owl:NamedIndividual ,
+                                    intel:hotel_reservation ;
+                           obo:BFO_0000101 :hotel_reservation_01 ;
+                           rdfs:label "hotel reservation 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation_02
+intel:hotel_reservation_02 rdf:type owl:NamedIndividual ,
+                                    intel:hotel_reservation ;
+                           obo:BFO_0000101 intel:hotel_reservation_information_02 ;
+                           rdfs:label "hotel_reservation_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation_information_02
+intel:hotel_reservation_information_02 rdf:type owl:NamedIndividual ,
+                                                :hotel_reservation_information ;
+                                       obo:BFO_0000084 intel:hotel_reservation_02 ;
+                                       rdfs:label "hotel_reservation_information_02" .
+
+
+###  https://example.org/ontologies/intel-ontology#investigation_report_information_01
+intel:investigation_report_information_01 rdf:type owl:NamedIndividual ,
+                                                   intel:investigation_report_information ;
+                                          obo:BFO_0000084 intel:Investigation_report_01 ;
+                                          obo:IAO_0000136 intel:person_02 ;
+                                          intel:has_documented_finding intel:finding_01 ,
+                                                                       intel:finding_02 ,
+                                                                       intel:finding_03 ,
+                                                                       intel:finding_04 ,
+                                                                       intel:finding_05 ,
+                                                                       intel:finding_06 ;
+                                          rdfs:label "investigation report information 01" .
+
+
+###  https://example.org/ontologies/intel-ontology#person_02
+intel:person_02 rdf:type owl:NamedIndividual ,
+                         :person ;
+                obo:RO_0000087 intel:Person_of_Interest_01 ;
+                :is_author_of intel:Post_02 ,
+                              intel:Post_03 ;
+                :possesses intel:Concert_Ticket_02 ,
+                           intel:boarding_pass_02 ,
+                           intel:hotel_reservation_02 ,
+                           <https://example.org/ontologies/intel-ontology#driver's_license_02> ;
+                rdfs:label "Alicia King" .
+
+
+###  https://example.org/ontologies/intel-ontology#person_03
+intel:person_03 rdf:type owl:NamedIndividual ,
+                         :person ;
+                obo:BFO_0000056 intel:Act_of_Investigation_Report_Designation_01 ,
+                                intel:Act_of_Investigation_Report_Review_01 ,
+                                intel:Act_of_investigation_01 ;
+                obo:RO_0000087 intel:counter_terrorism_investigator_01 ;
+                rdfs:label "person_03" .
+
+
+###  https://example.org/ontologies/intel-ontology#Driver's_License_Information_02
+<https://example.org/ontologies/intel-ontology#Driver's_License_Information_02> rdf:type owl:NamedIndividual ,
+                                                                                         :driver_license ;
+                                                                                obo:BFO_0000084 <https://example.org/ontologies/intel-ontology#driver's_license_02> ;
+                                                                                cco:ont00001916 intel:person_02 ;
+                                                                                :has_first_name "Alicia" ;
+                                                                                :has_last_name "King" ;
+                                                                                rdfs:label "Driver's License Information 02" .
+
+
+###  https://example.org/ontologies/intel-ontology#driver's_license_02
+<https://example.org/ontologies/intel-ontology#driver's_license_02> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.commoncoreontologies.org/AgentOntology#driver's_license> ;
+                                                                    obo:BFO_0000101 <https://example.org/ontologies/intel-ontology#Driver's_License_Information_02> ;
+                                                                    rdfs:label "driver's license 02" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology#driver's_license_01
+<https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> rdf:type owl:NamedIndividual ,
+                                                                                  <https://www.commoncoreontologies.org/AgentOntology#driver's_license> ;
+                                                                         obo:BFO_0000101 :driver_license_01 ;
+                                                                         rdfs:label "driver's license 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_Posting_01
+:Act_of_Facebook_Posting_01 rdf:type owl:NamedIndividual ,
+                                     :Act_of_Facebook_posting ;
+                            cco:ont00001986 :Post_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01
+:Act_of_Flight_Plan_01 rdf:type owl:NamedIndividual ,
+                                :Act_of_Flight_Plan ;
+                       obo:BFO_0000059 :Flight_plan_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Commercial_airplane_01
+:Commercial_airplane_01 rdf:type owl:NamedIndividual ,
+                                 :Commcercial_airplane ;
+                        obo:BFO_0000056 :Act_of_Flight_Plan_01 ;
+                        :has_ICAO_Telephony "JETBLUE" ;
+                        :has_ICAO_code "JBU" ;
+                        :has_MSN 3808 ;
+                        :has_Mode_S_Hex_Code "AAFCA8" ;
+                        :has_tail_number "N807JB" ;
+                        rdfs:label "Commercial airplane" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01
+:Concert_Ticket_01 rdf:type owl:NamedIndividual ,
+                            :concert_ticket ,
+                            :ticket ;
+                   obo:BFO_0000101 :concert_reservation_information_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook_Post_Information_01
+:Facebook_Post_Information_01 rdf:type owl:NamedIndividual ,
+                                       :Facebook_Post ;
+                              obo:BFO_0000084 :Post_01 ;
+                              obo:IAO_0000136 :concert_attack ;
+                              rdfs:label "Facebook Post Information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Flight_plan_01
+:Flight_plan_01 rdf:type owl:NamedIndividual ,
+                         :Flight_plan ;
+                obo:IAO_0000136 :Act_of_Flight_Plan_01 ;
+                :has_arrival_airport "'O\\'Hare International Airport'" ;
+                :has_departure_airport "'Baltimore Washington International Airport'" ;
+                rdfs:label "Flight plan 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Post_01
+:Post_01 rdf:type owl:NamedIndividual ,
+                  :Post ;
+         obo:BFO_0000101 :Facebook_Post_Information_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Terrorist_profile_01
+:Terrorist_profile_01 rdf:type owl:NamedIndividual ;
+                      rdfs:label "Person of Interest Information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airline_reservation_01
+:airline_reservation_01 rdf:type owl:NamedIndividual ,
+                                 :airline_reservation ;
+                        obo:BFO_0000084 :boarding_pass_01 ;
+                        :has_arrival_airport "O'Hare International Airport" ;
+                        :has_boarding_gate "A" ;
+                        :has_boarding_group 1 ;
+                        :has_departure_airport "Baltimore Washington International Airport" ;
+                        :has_first_name "John" ;
+                        :has_last_name "Smith" ;
+                        rdfs:label "airline_reservation_information_01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/arrival_airport_01
+:arrival_airport_01 rdf:type owl:NamedIndividual ,
+                             :arrival_airport ;
+                    rdfs:label "O'Hare International Airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01
+:boarding_pass_01 rdf:type owl:NamedIndividual ,
+                           :boarding_pass ;
+                  obo:BFO_0000101 :airline_reservation_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_attack
+:concert_attack rdf:type owl:NamedIndividual ,
+                         cco:ont00000654 ;
+                rdfs:label "concert attack" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information_01
+:concert_reservation_information_01 rdf:type owl:NamedIndividual ,
+                                             :concert_reservation_information ;
+                                    obo:BFO_0000084 :Concert_Ticket_01 .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/departure_airport_01
+:departure_airport_01 rdf:type owl:NamedIndividual ,
+                               :departure_airport ;
+                      rdfs:label "Baltimore Washington International Airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/driver_license_01
+:driver_license_01 rdf:type owl:NamedIndividual ,
+                            :driver_license ;
+                   obo:BFO_0000084 <https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> ;
+                   cco:ont00001916 :person_01 ;
+                   :has_first_name "John" ;
+                   :has_last_name "Smith" ;
+                   rdfs:label "Driver's License Information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/event_venue_01
+:event_venue_01 rdf:type owl:NamedIndividual ,
+                         :event_venue ;
+                rdfs:label "The Chicago Theatre" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/guest_01
+:guest_01 rdf:type owl:NamedIndividual ,
+                   :guest ;
+          rdfs:label "Hampton Inn Chicago Guest" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_01
+:hotel_01 rdf:type owl:NamedIndividual ,
+                   :hotel ;
+          rdfs:label "Hampton Inn Chicago" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_01
+:hotel_reservation_01 rdf:type owl:NamedIndividual ,
+                               :hotel_reservation_information ;
+                      obo:BFO_0000084 intel:hotel_reservation_01 ;
+                      :has_first_name "John" ;
+                      :has_last_name "Smith" ;
+                      :has_reservation_number "ABCD12345" ;
+                      rdfs:label "hotel reservation information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/passenger_01
+:passenger_01 rdf:type owl:NamedIndividual ,
+                       :passenger ;
+              rdfs:label "Jetblue passenger" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/person_01
+:person_01 rdf:type owl:NamedIndividual ,
+                    :person ;
+           obo:BFO_0000056 :Act_of_Facebook_Posting_01 ;
+           :is_author_of :Post_01 ;
+           :possesses intel:hotel_reservation_01 ,
+                      <https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> ,
+                      :Concert_Ticket_01 ,
+                      :boarding_pass_01 ;
+           rdfs:label "John Smith" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/proper_name_01
+:proper_name_01 rdf:type owl:NamedIndividual ,
+                         cco:ont00001331 ;
+                obo:IAO_0000136 :person_01 ;
+                :has_first_name "John" ;
+                :has_last_name "Smith" ;
+                rdfs:label "proper name 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/terrorist_organization_01
+:terrorist_organization_01 rdf:type owl:NamedIndividual ,
+                                    :terrorist_organization ;
+                           rdfs:label "The Rising Dawn" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( :person
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :is_author_of ;
+                         owl:someValuesFrom [ owl:intersectionOf ( :Post
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty obo:BFO_0000101 ;
+                                                                     owl:someValuesFrom :Facebook_Post
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty obo:RO_0000087 ;
+                    owl:someValuesFrom :social_media_user
+                  ]
+] .
+
+
+[ owl:intersectionOf ( :person
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :is_author_of ;
+                         owl:someValuesFrom [ owl:intersectionOf ( :Post
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty obo:BFO_0000101 ;
+                                                                     owl:someValuesFrom [ owl:intersectionOf ( :Facebook_Post
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty obo:IAO_0000136 ;
+                                                                                                                 owl:hasValue :concert_attack
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
+                                                                                        ]
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :possesses ;
+                         owl:someValuesFrom intel:hotel_reservation
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :possesses ;
+                         owl:someValuesFrom :boarding_pass
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :possesses ;
+                         owl:someValuesFrom :concert_ticket
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty obo:RO_0000087 ;
+                    owl:someValuesFrom :Person_Of_Interest
+                  ]
+] .
+
+
+[ owl:intersectionOf ( :person
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :possesses ;
+                         owl:someValuesFrom [ owl:intersectionOf ( :boarding_pass
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty obo:BFO_0000101 ;
+                                                                     owl:someValuesFrom :airline_reservation
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty obo:RO_0000087 ;
+                    owl:someValuesFrom :Jetblue_passenger
+                  ]
+] .
+
+
+[ owl:intersectionOf ( :person
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :possesses ;
+                         owl:someValuesFrom [ owl:intersectionOf ( :concert_ticket
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty obo:BFO_0000101 ;
+                                                                     owl:someValuesFrom :concert_reservation_information
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty obo:RO_0000087 ;
+                    owl:someValuesFrom :concert_attendee
+                  ]
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
